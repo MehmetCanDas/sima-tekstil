@@ -783,6 +783,17 @@ export async function deleteImageAction(
         .run();
     }
 
+    // Diskteki dosyayi da sil; birakilirsa yetim dosyalar birikiyor.
+    if (image.url.startsWith("/uploads/")) {
+      try {
+        const { unlink } = await import("node:fs/promises");
+        const path = await import("node:path");
+        await unlink(path.join(process.cwd(), "public", image.url));
+      } catch {
+        // Dosya zaten yoksa sorun degil.
+      }
+    }
+
     await logActivity({
       actor,
       action: "product.image_delete",
@@ -791,7 +802,13 @@ export async function deleteImageAction(
       before: { url: image.url },
     });
 
+    const product = db
+      .select({ slug: products.slug })
+      .from(products)
+      .where(eq(products.id, image.productId))
+      .get();
     revalidatePath(`/admin/urunler/${image.productId}`);
+    revalidateStorefront(product?.slug);
     return ok(undefined, "Görsel silindi.");
   });
 }
@@ -852,6 +869,7 @@ async function storeProductImages(
 
   const { mkdir, writeFile } = await import("node:fs/promises");
   const path = await import("node:path");
+  const sharp = (await import("sharp")).default;
 
   const dir = path.join(process.cwd(), "public", "uploads", "products", productId);
   await mkdir(dir, { recursive: true });
@@ -864,9 +882,37 @@ async function storeProductImages(
   let sortOrder = current?.n ?? 0;
   let saved = 0;
 
+  // Uzanti tarayicinin bildirdigi file.type'a gore degil, dosyanin GERCEK
+  // icerigine gore verilir. Bazi tarayicilar (ve araya giren proxy'ler) yanlis
+  // MIME bildirip icerigi bozuk .webp olarak yazdirabiliyordu; next/image bunu
+  // "gecerli gorsel degil" diye reddedip resmi indirilecek dosya olarak
+  // donuyor, sitede kirik gorunuyordu.
+  const FORMAT_EXT: Record<string, string> = {
+    jpeg: "jpg",
+    png: "png",
+    webp: "webp",
+    avif: "avif",
+  };
+
   for (const file of files) {
-    const name = `${randomUUID()}.${IMAGE_MIME_EXT[file.type]}`;
-    await writeFile(path.join(dir, name), Buffer.from(await file.arrayBuffer()));
+    const buffer = Buffer.from(await file.arrayBuffer());
+
+    let ext: string | undefined;
+    try {
+      const meta = await sharp(buffer).metadata();
+      ext = meta.format ? FORMAT_EXT[meta.format] : undefined;
+    } catch {
+      ext = undefined;
+    }
+    if (!ext) {
+      return {
+        saved,
+        error: `${file.name} geçerli bir görsel değil ya da bozuk. JPEG veya PNG deneyin.`,
+      };
+    }
+
+    const name = `${randomUUID()}.${ext}`;
+    await writeFile(path.join(dir, name), buffer);
 
     db.insert(productImages)
       .values({
