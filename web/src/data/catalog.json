@@ -1,0 +1,2426 @@
+{
+ "brand": {
+  "name": "Sima Üniforma",
+  "tagline": "Kurumsal & Endüstriyel İş Kıyafetleri",
+  "owner": "Yusuf Taşören",
+  "ownerTitle": "Kurucu & Genel Müdür",
+  "phone": "0505 016 79 89",
+  "phoneRaw": "+905050167989",
+  "email": "simanakis32@gmail.com",
+  "instagram": "yusuf_tasoren",
+  "address": "Vatan Mah. Yeni Kavak Cad. Vatan Sit. A Blok Zemin Kat — Merkez / ISPARTA",
+  "city": "Isparta",
+  "missing": [
+   "ticari unvan",
+   "vergi dairesi / no",
+   "mersis",
+   "alan adı",
+   "kurumsal e-posta"
+  ]
+ },
+ "categories": [
+  {
+   "id": "ust-giyim",
+   "name": "Üst Giyim",
+   "world": "is-kiyafetleri"
+  },
+  {
+   "id": "alt-giyim",
+   "name": "Alt Giyim",
+   "world": "is-kiyafetleri"
+  },
+  {
+   "id": "yelek",
+   "name": "Yelekler",
+   "world": "is-kiyafetleri"
+  },
+  {
+   "id": "tulum",
+   "name": "Tulum",
+   "world": "is-kiyafetleri"
+  },
+  {
+   "id": "yuksek-gorunurluk",
+   "name": "Yüksek Görünürlük",
+   "world": "is-kiyafetleri"
+  },
+  {
+   "id": "yagmurluk",
+   "name": "Yağmurluk",
+   "world": "is-kiyafetleri"
+  },
+  {
+   "id": "ayakkabi",
+   "name": "İş Ayakkabısı",
+   "world": "is-kiyafetleri"
+  },
+  {
+   "id": "aksesuar",
+   "name": "Aksesuar",
+   "world": "is-kiyafetleri"
+  },
+  {
+   "id": "meslek-setleri",
+   "name": "Mesleğe Özel Setler",
+   "world": "is-kiyafetleri"
+  },
+  {
+   "id": "spor",
+   "name": "Spor ve Kulüp",
+   "world": "is-kiyafetleri"
+  },
+  {
+   "id": "promosyon",
+   "name": "Promosyon Ürünleri",
+   "world": "promosyon"
+  }
+ ],
+ "sectors": [
+  {
+   "id": "endustri",
+   "name": "Endüstri ve Fabrika"
+  },
+  {
+   "id": "insaat",
+   "name": "İnşaat ve Saha"
+  },
+  {
+   "id": "guvenlik",
+   "name": "Özel Güvenlik"
+  },
+  {
+   "id": "mutfak",
+   "name": "Mutfak ve Restoran"
+  },
+  {
+   "id": "saglik",
+   "name": "Sağlık"
+  },
+  {
+   "id": "belediye",
+   "name": "Belediye ve Kamu"
+  },
+  {
+   "id": "spor",
+   "name": "Spor ve Kulüp"
+  }
+ ],
+ "colors": [
+  {
+   "id": "lacivert",
+   "name": "Lacivert",
+   "hex": "#1B2A4A"
+  },
+  {
+   "id": "turuncu",
+   "name": "Turuncu",
+   "hex": "#E4610F"
+  },
+  {
+   "id": "siyah",
+   "name": "Siyah",
+   "hex": "#101113"
+  },
+  {
+   "id": "saks-mavi",
+   "name": "Saks Mavi",
+   "hex": "#2B6FD4"
+  },
+  {
+   "id": "kirmizi",
+   "name": "Kirmizi",
+   "hex": "#C4232B"
+  },
+  {
+   "id": "haki-yesil",
+   "name": "Haki Yesil",
+   "hex": "#4A5340"
+  },
+  {
+   "id": "gri",
+   "name": "Gri",
+   "hex": "#6E7376"
+  },
+  {
+   "id": "bordo",
+   "name": "Bordo",
+   "hex": "#6B1F2A"
+  },
+  {
+   "id": "fume",
+   "name": "Fume",
+   "hex": "#3A3E42"
+  },
+  {
+   "id": "turkuaz",
+   "name": "Turkuaz",
+   "hex": "#0FA5A5"
+  },
+  {
+   "id": "mavi",
+   "name": "Mavi",
+   "hex": "#1E9BD8"
+  },
+  {
+   "id": "antrasit",
+   "name": "Antrasit",
+   "hex": "#333739"
+  },
+  {
+   "id": "sari",
+   "name": "Sari",
+   "hex": "#D9D416"
+  },
+  {
+   "id": "yesil",
+   "name": "Yesil",
+   "hex": "#9CC01A"
+  }
+ ],
+ "products": [
+  {
+   "id": "p02-polar-mont",
+   "slug": "polar-mont-s2",
+   "name": "Polar Mont (Katalog s. 2)",
+   "catalogTitle": "POLAR MONT",
+   "category": "ust-giyim",
+   "subcategory": "polar-mont",
+   "sectors": [
+    "endustri",
+    "belediye"
+   ],
+   "fabrics": [
+    "Polar"
+   ],
+   "colors": [
+    {
+     "id": "lacivert",
+     "name": "Lacivert",
+     "hex": "#1B2A4A",
+     "secondary": null,
+     "label": "LACİVERT"
+    },
+    {
+     "id": "turuncu",
+     "name": "Turuncu",
+     "hex": "#E4610F",
+     "secondary": null,
+     "label": "TURUNCU"
+    },
+    {
+     "id": "siyah",
+     "name": "Siyah",
+     "hex": "#101113",
+     "secondary": null,
+     "label": "SİYAH"
+    },
+    {
+     "id": "saks-mavi",
+     "name": "Saks Mavi",
+     "hex": "#2B6FD4",
+     "secondary": null,
+     "label": "SAKS MAVİ"
+    },
+    {
+     "id": "kirmizi",
+     "name": "Kirmizi",
+     "hex": "#C4232B",
+     "secondary": null,
+     "label": "KIRMIZI"
+    },
+    {
+     "id": "haki-yesil",
+     "name": "Haki Yesil",
+     "hex": "#4A5340",
+     "secondary": null,
+     "label": "HAKİ YEŞİL"
+    },
+    {
+     "id": "gri",
+     "name": "Gri",
+     "hex": "#6E7376",
+     "secondary": null,
+     "label": "GRİ"
+    }
+   ],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p02-polar-mont/00.jpeg",
+    "/catalog/p02-polar-mont/02.jpeg",
+    "/catalog/p02-polar-mont/03.jpeg",
+    "/catalog/p02-polar-mont/04.jpeg",
+    "/catalog/p02-polar-mont/05.jpeg",
+    "/catalog/p02-polar-mont/06.jpeg",
+    "/catalog/p02-polar-mont/07.jpeg"
+   ],
+   "sourcePage": 2,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "urun-ayrimi"
+   ],
+   "needsSplit": false
+  },
+  {
+   "id": "p02-polar-mont-3-cepli",
+   "slug": "polar-mont-3-cepli",
+   "name": "Polar Mont 3 Cepli",
+   "catalogTitle": "POLAR MONT 3 CEPLİ",
+   "category": "ust-giyim",
+   "subcategory": "polar-mont",
+   "sectors": [
+    "endustri",
+    "belediye"
+   ],
+   "fabrics": [
+    "Polar"
+   ],
+   "colors": [
+    {
+     "id": "lacivert",
+     "name": "Lacivert",
+     "hex": "#1B2A4A",
+     "secondary": null,
+     "label": "LACİVERT"
+    },
+    {
+     "id": "saks-mavi",
+     "name": "Saks Mavi",
+     "hex": "#2B6FD4",
+     "secondary": null,
+     "label": "SAKS MAVİ"
+    },
+    {
+     "id": "gri",
+     "name": "Gri",
+     "hex": "#6E7376",
+     "secondary": null,
+     "label": "GRİ"
+    },
+    {
+     "id": "siyah",
+     "name": "Siyah",
+     "hex": "#101113",
+     "secondary": null,
+     "label": "SİYAH"
+    },
+    {
+     "id": "kirmizi",
+     "name": "Kirmizi",
+     "hex": "#C4232B",
+     "secondary": null,
+     "label": "KIRMIZI"
+    }
+   ],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p02-polar-mont-3-cepli/00.jpeg",
+    "/catalog/p02-polar-mont-3-cepli/02.jpeg",
+    "/catalog/p02-polar-mont-3-cepli/03.jpeg",
+    "/catalog/p02-polar-mont-3-cepli/04.jpeg",
+    "/catalog/p02-polar-mont-3-cepli/05.jpeg"
+   ],
+   "sourcePage": 2,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq"
+   ],
+   "needsSplit": false
+  },
+  {
+   "id": "p03-softshell-polar-mont",
+   "slug": "softshell-polar-mont",
+   "name": "Softshell Polar Mont",
+   "catalogTitle": "SOFTSHELL POLAR MONT",
+   "category": "ust-giyim",
+   "subcategory": "softshell",
+   "sectors": [
+    "endustri",
+    "insaat"
+   ],
+   "fabrics": [
+    "Softshell",
+    "Polar"
+   ],
+   "colors": [
+    {
+     "id": "saks-mavi",
+     "name": "Saks Mavi",
+     "hex": "#2B6FD4",
+     "secondary": null,
+     "label": "SAKS MAVİ"
+    },
+    {
+     "id": "lacivert",
+     "name": "Lacivert",
+     "hex": "#1B2A4A",
+     "secondary": null,
+     "label": "LACİVERT"
+    },
+    {
+     "id": "bordo",
+     "name": "Bordo",
+     "hex": "#6B1F2A",
+     "secondary": null,
+     "label": "BORDO"
+    },
+    {
+     "id": "gri",
+     "name": "Gri",
+     "hex": "#6E7376",
+     "secondary": null,
+     "label": "GRİ"
+    },
+    {
+     "id": "kirmizi",
+     "name": "Kirmizi",
+     "hex": "#C4232B",
+     "secondary": null,
+     "label": "KIRMIZI"
+    },
+    {
+     "id": "siyah",
+     "name": "Siyah",
+     "hex": "#101113",
+     "secondary": null,
+     "label": "SİYAH"
+    }
+   ],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p03-softshell-polar-mont/00.jpeg",
+    "/catalog/p03-softshell-polar-mont/02.jpeg",
+    "/catalog/p03-softshell-polar-mont/03.jpeg",
+    "/catalog/p03-softshell-polar-mont/04.jpeg",
+    "/catalog/p03-softshell-polar-mont/05.jpeg",
+    "/catalog/p03-softshell-polar-mont/06.jpeg"
+   ],
+   "sourcePage": 3,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq"
+   ],
+   "needsSplit": false
+  },
+  {
+   "id": "p03-sifir-yaka-sweat-2-iplik",
+   "slug": "sifir-yaka-sweat-2-iplik",
+   "name": "Sıfır Yaka Sweatshirt (2 İplik)",
+   "catalogTitle": "SIFIR YAKA SWEAT 2 İPLİK",
+   "category": "ust-giyim",
+   "subcategory": "sweatshirt",
+   "sectors": [
+    "endustri",
+    "guvenlik"
+   ],
+   "fabrics": [
+    "2 İplik"
+   ],
+   "colors": [
+    {
+     "id": "fume",
+     "name": "Fume",
+     "hex": "#3A3E42",
+     "secondary": null,
+     "label": "FÜME"
+    },
+    {
+     "id": "siyah",
+     "name": "Siyah",
+     "hex": "#101113",
+     "secondary": null,
+     "label": "SİYAH"
+    },
+    {
+     "id": "gri",
+     "name": "Gri",
+     "hex": "#6E7376",
+     "secondary": null,
+     "label": "GRİ"
+    },
+    {
+     "id": "lacivert",
+     "name": "Lacivert",
+     "hex": "#1B2A4A",
+     "secondary": null,
+     "label": "LACİVERT"
+    },
+    {
+     "id": "kirmizi",
+     "name": "Kirmizi",
+     "hex": "#C4232B",
+     "secondary": null,
+     "label": "KIRMIZI"
+    },
+    {
+     "id": "saks-mavi",
+     "name": "Saks Mavi",
+     "hex": "#2B6FD4",
+     "secondary": null,
+     "label": "SAKS MAVİ"
+    }
+   ],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p03-sifir-yaka-sweat-2-iplik/00.jpeg",
+    "/catalog/p03-sifir-yaka-sweat-2-iplik/02.jpeg",
+    "/catalog/p03-sifir-yaka-sweat-2-iplik/03.jpeg",
+    "/catalog/p03-sifir-yaka-sweat-2-iplik/04.jpeg",
+    "/catalog/p03-sifir-yaka-sweat-2-iplik/05.jpeg",
+    "/catalog/p03-sifir-yaka-sweat-2-iplik/06.jpeg"
+   ],
+   "sourcePage": 3,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq"
+   ],
+   "needsSplit": false
+  },
+  {
+   "id": "p04-polar-mont",
+   "slug": "polar-mont-s4",
+   "name": "Polar Mont (Katalog s. 4)",
+   "catalogTitle": "POLAR MONT",
+   "category": "ust-giyim",
+   "subcategory": "polar-mont",
+   "sectors": [
+    "endustri",
+    "belediye"
+   ],
+   "fabrics": [
+    "Polar"
+   ],
+   "colors": [
+    {
+     "id": "saks-mavi",
+     "name": "Saks Mavi",
+     "hex": "#2B6FD4",
+     "secondary": null,
+     "label": "SAKS MAVİ"
+    },
+    {
+     "id": "kirmizi",
+     "name": "Kirmizi",
+     "hex": "#C4232B",
+     "secondary": null,
+     "label": "KIRMIZI"
+    },
+    {
+     "id": "gri",
+     "name": "Gri",
+     "hex": "#6E7376",
+     "secondary": null,
+     "label": "GRİ"
+    },
+    {
+     "id": "fume",
+     "name": "Fume",
+     "hex": "#3A3E42",
+     "secondary": null,
+     "label": "FÜME"
+    },
+    {
+     "id": "turuncu",
+     "name": "Turuncu",
+     "hex": "#E4610F",
+     "secondary": null,
+     "label": "TURUNCU"
+    },
+    {
+     "id": "siyah",
+     "name": "Siyah",
+     "hex": "#101113",
+     "secondary": null,
+     "label": "SİYAH"
+    }
+   ],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p04-polar-mont/00.jpeg",
+    "/catalog/p04-polar-mont/01.jpeg",
+    "/catalog/p04-polar-mont/02.jpeg",
+    "/catalog/p04-polar-mont/03.jpeg",
+    "/catalog/p04-polar-mont/04.jpeg",
+    "/catalog/p04-polar-mont/05.jpeg"
+   ],
+   "sourcePage": 4,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "urun-ayrimi"
+   ],
+   "needsSplit": false
+  },
+  {
+   "id": "p05-polo-yaka-kisa-kol",
+   "slug": "polo-yaka-kisa-kol",
+   "name": "Polo Yaka Kısa Kollu İş Tişörtü",
+   "catalogTitle": "POLO YAKA KISA KOL",
+   "category": "ust-giyim",
+   "subcategory": "tisort",
+   "sectors": [
+    "endustri",
+    "belediye",
+    "mutfak"
+   ],
+   "fabrics": [],
+   "colors": [
+    {
+     "id": "kirmizi",
+     "name": "Kirmizi",
+     "hex": "#C4232B",
+     "secondary": null,
+     "label": "KIRMIZI"
+    },
+    {
+     "id": "siyah",
+     "name": "Siyah",
+     "hex": "#101113",
+     "secondary": null,
+     "label": "SİYAH"
+    },
+    {
+     "id": "lacivert",
+     "name": "Lacivert",
+     "hex": "#1B2A4A",
+     "secondary": null,
+     "label": "LACİVERT"
+    },
+    {
+     "id": "gri",
+     "name": "Gri",
+     "hex": "#6E7376",
+     "secondary": null,
+     "label": "GRİ"
+    },
+    {
+     "id": "turkuaz",
+     "name": "Turkuaz",
+     "hex": "#0FA5A5",
+     "secondary": null,
+     "label": "TURKUAZ"
+    },
+    {
+     "id": "turuncu",
+     "name": "Turuncu",
+     "hex": "#E4610F",
+     "secondary": null,
+     "label": "TURUNCU"
+    },
+    {
+     "id": "saks-mavi",
+     "name": "Saks Mavi",
+     "hex": "#2B6FD4",
+     "secondary": null,
+     "label": "SAKS MAVİ"
+    }
+   ],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p05-polo-yaka-kisa-kol/00.jpeg",
+    "/catalog/p05-polo-yaka-kisa-kol/02.jpeg",
+    "/catalog/p05-polo-yaka-kisa-kol/03.jpeg",
+    "/catalog/p05-polo-yaka-kisa-kol/04.jpeg",
+    "/catalog/p05-polo-yaka-kisa-kol/05.jpeg",
+    "/catalog/p05-polo-yaka-kisa-kol/06.jpeg",
+    "/catalog/p05-polo-yaka-kisa-kol/07.jpeg"
+   ],
+   "sourcePage": 5,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq"
+   ],
+   "needsSplit": false
+  },
+  {
+   "id": "p05-sifir-yaka-kisa-kol-tisort",
+   "slug": "sifir-yaka-kisa-kol-tisort",
+   "name": "Sıfır Yaka Kısa Kollu İş Tişörtü",
+   "catalogTitle": "SIFIR YAKA KISA KOL TİŞÖRT",
+   "category": "ust-giyim",
+   "subcategory": "tisort",
+   "sectors": [
+    "endustri",
+    "belediye"
+   ],
+   "fabrics": [],
+   "colors": [
+    {
+     "id": "turuncu",
+     "name": "Turuncu",
+     "hex": "#E4610F",
+     "secondary": null,
+     "label": "TURUNCU"
+    },
+    {
+     "id": "turkuaz",
+     "name": "Turkuaz",
+     "hex": "#0FA5A5",
+     "secondary": null,
+     "label": "TURKUAZ"
+    },
+    {
+     "id": "saks-mavi",
+     "name": "Saks Mavi",
+     "hex": "#2B6FD4",
+     "secondary": null,
+     "label": "SAKS MAVİ"
+    },
+    {
+     "id": "lacivert",
+     "name": "Lacivert",
+     "hex": "#1B2A4A",
+     "secondary": null,
+     "label": "LACİVERT"
+    },
+    {
+     "id": "gri",
+     "name": "Gri",
+     "hex": "#6E7376",
+     "secondary": null,
+     "label": "GRİ"
+    },
+    {
+     "id": "siyah",
+     "name": "Siyah",
+     "hex": "#101113",
+     "secondary": null,
+     "label": "SİYAH"
+    },
+    {
+     "id": "kirmizi",
+     "name": "Kirmizi",
+     "hex": "#C4232B",
+     "secondary": null,
+     "label": "KIRMIZI"
+    }
+   ],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p05-sifir-yaka-kisa-kol-tisort/00.jpeg",
+    "/catalog/p05-sifir-yaka-kisa-kol-tisort/02.jpeg",
+    "/catalog/p05-sifir-yaka-kisa-kol-tisort/03.jpeg",
+    "/catalog/p05-sifir-yaka-kisa-kol-tisort/04.jpeg",
+    "/catalog/p05-sifir-yaka-kisa-kol-tisort/05.jpeg",
+    "/catalog/p05-sifir-yaka-kisa-kol-tisort/06.jpeg",
+    "/catalog/p05-sifir-yaka-kisa-kol-tisort/07.jpeg"
+   ],
+   "sourcePage": 5,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq"
+   ],
+   "needsSplit": false
+  },
+  {
+   "id": "p06-is-pantolonu",
+   "slug": "is-pantolonu",
+   "name": "İş Pantolonu",
+   "catalogTitle": "İŞ PANTOLONU",
+   "category": "alt-giyim",
+   "subcategory": "is-pantolonu",
+   "sectors": [
+    "endustri",
+    "insaat"
+   ],
+   "fabrics": [
+    "Harman Gabardin",
+    "7/7 Gabardin",
+    "Kot",
+    "Likralı Kot",
+    "Softshell",
+    "Bondit"
+   ],
+   "colors": [],
+   "variantNotes": [
+    "7/7 Gabardin",
+    "Bondi Ici Elyafli",
+    "Cok Cepli",
+    "Harman Gabardin",
+    "Is Pantolonu",
+    "Kaynaga Dayanikli",
+    "Kot Pantolon",
+    "Likrali",
+    "Pantolon",
+    "Shoftshell",
+    "Su Gecirmez"
+   ],
+   "images": [
+    "/catalog/p06-is-pantolonu/01.jpeg",
+    "/catalog/p06-is-pantolonu/02.jpeg",
+    "/catalog/p06-is-pantolonu/03.jpeg",
+    "/catalog/p06-is-pantolonu/04.jpeg",
+    "/catalog/p06-is-pantolonu/05.jpeg",
+    "/catalog/p06-is-pantolonu/06.jpeg",
+    "/catalog/p06-is-pantolonu/07.jpeg",
+    "/catalog/p06-is-pantolonu/08.jpeg",
+    "/catalog/p06-is-pantolonu/09.jpeg",
+    "/catalog/p06-is-pantolonu/10.jpeg",
+    "/catalog/p06-is-pantolonu/11.jpeg",
+    "/catalog/p06-is-pantolonu/12.jpeg"
+   ],
+   "sourcePage": 6,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "renk",
+    "urun-ayrimi"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p07-is-montu-kislik",
+   "slug": "is-montu-kislik",
+   "name": "Kışlık İş Montu",
+   "catalogTitle": "İŞ MONTU KIŞLIK",
+   "category": "ust-giyim",
+   "subcategory": "is-montu",
+   "sectors": [
+    "endustri",
+    "insaat"
+   ],
+   "fabrics": [
+    "Gabardin",
+    "Kot"
+   ],
+   "colors": [
+    {
+     "id": "turuncu",
+     "name": "Turuncu",
+     "hex": "#E4610F",
+     "secondary": {
+      "id": "gri",
+      "name": "Gri",
+      "hex": "#6E7376"
+     },
+     "label": "GRİ TURUNCU"
+    },
+    {
+     "id": "gri",
+     "name": "Gri",
+     "hex": "#6E7376",
+     "secondary": {
+      "id": "mavi",
+      "name": "Mavi",
+      "hex": "#1E9BD8"
+     },
+     "label": "GRİ MAVİ"
+    },
+    {
+     "id": "lacivert",
+     "name": "Lacivert",
+     "hex": "#1B2A4A",
+     "secondary": {
+      "id": "kirmizi",
+      "name": "Kirmizi",
+      "hex": "#C4232B"
+     },
+     "label": "LACİVERT KIRMIZI"
+    },
+    {
+     "id": "lacivert",
+     "name": "Lacivert",
+     "hex": "#1B2A4A",
+     "secondary": null,
+     "label": "LACİVERT"
+    }
+   ],
+   "variantNotes": [
+    "Kot Is Montu"
+   ],
+   "images": [
+    "/catalog/p07-is-montu-kislik/00.jpeg",
+    "/catalog/p07-is-montu-kislik/02.jpeg",
+    "/catalog/p07-is-montu-kislik/03.jpeg",
+    "/catalog/p07-is-montu-kislik/04.jpeg",
+    "/catalog/p07-is-montu-kislik/05.jpeg"
+   ],
+   "sourcePage": 7,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "urun-ayrimi"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p07-is-yelegi",
+   "slug": "is-yelegi",
+   "name": "İş Yeleği",
+   "catalogTitle": "İŞ YELEĞİ",
+   "category": "yelek",
+   "subcategory": "is-yelegi",
+   "sectors": [
+    "endustri",
+    "insaat"
+   ],
+   "fabrics": [
+    "16/12 Elyaflı",
+    "7/7 Elyaflı Gabardin"
+   ],
+   "colors": [
+    {
+     "id": "turuncu",
+     "name": "Turuncu",
+     "hex": "#E4610F",
+     "secondary": {
+      "id": "gri",
+      "name": "Gri",
+      "hex": "#6E7376"
+     },
+     "label": "GRİ TURUNCU"
+    }
+   ],
+   "variantNotes": [
+    "16/12 Elyafli",
+    "7/7 Elyafli Gabardin",
+    "Cok Cepli Yelek",
+    "Gabardin Yelek",
+    "Kaynakci Yelegi"
+   ],
+   "images": [
+    "/catalog/p07-is-yelegi/00.jpeg",
+    "/catalog/p07-is-yelegi/01.jpeg",
+    "/catalog/p07-is-yelegi/02.jpeg"
+   ],
+   "sourcePage": 7,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "urun-ayrimi"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p08-softshell-mont-su-gecirmez",
+   "slug": "softshell-mont-su-gecirmez",
+   "name": "Su Geçirmez Softshell Mont",
+   "catalogTitle": "SOFTSHELL MONT SU GEÇİRMEZ",
+   "category": "ust-giyim",
+   "subcategory": "softshell",
+   "sectors": [
+    "endustri",
+    "insaat",
+    "guvenlik"
+   ],
+   "fabrics": [
+    "Softshell"
+   ],
+   "colors": [
+    {
+     "id": "haki-yesil",
+     "name": "Haki Yesil",
+     "hex": "#4A5340",
+     "secondary": {
+      "id": "siyah",
+      "name": "Siyah",
+      "hex": "#101113"
+     },
+     "label": "HAKİ SİYAH"
+    },
+    {
+     "id": "siyah",
+     "name": "Siyah",
+     "hex": "#101113",
+     "secondary": {
+      "id": "gri",
+      "name": "Gri",
+      "hex": "#6E7376"
+     },
+     "label": "SİYAH GRİ"
+    },
+    {
+     "id": "siyah",
+     "name": "Siyah",
+     "hex": "#101113",
+     "secondary": null,
+     "label": "SİYAH"
+    },
+    {
+     "id": "antrasit",
+     "name": "Antrasit",
+     "hex": "#333739",
+     "secondary": {
+      "id": "gri",
+      "name": "Gri",
+      "hex": "#6E7376"
+     },
+     "label": "ANTRASİT GRİ"
+    }
+   ],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p08-softshell-mont-su-gecirmez/00.jpeg",
+    "/catalog/p08-softshell-mont-su-gecirmez/02.jpeg",
+    "/catalog/p08-softshell-mont-su-gecirmez/03.jpeg",
+    "/catalog/p08-softshell-mont-su-gecirmez/04.jpeg",
+    "/catalog/p08-softshell-mont-su-gecirmez/05.jpeg"
+   ],
+   "sourcePage": 8,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq"
+   ],
+   "needsSplit": false
+  },
+  {
+   "id": "p08-softshell-yelek-su-gecirmez",
+   "slug": "softshell-yelek-su-gecirmez",
+   "name": "Su Geçirmez Softshell Yelek",
+   "catalogTitle": "SOFTSHELL YELEK SU GEÇİRMEZ",
+   "category": "yelek",
+   "subcategory": "softshell-yelek",
+   "sectors": [
+    "endustri",
+    "insaat"
+   ],
+   "fabrics": [
+    "Softshell"
+   ],
+   "colors": [
+    {
+     "id": "antrasit",
+     "name": "Antrasit",
+     "hex": "#333739",
+     "secondary": null,
+     "label": "ANTRASİT"
+    },
+    {
+     "id": "siyah",
+     "name": "Siyah",
+     "hex": "#101113",
+     "secondary": null,
+     "label": "SİYAH"
+    },
+    {
+     "id": "gri",
+     "name": "Gri",
+     "hex": "#6E7376",
+     "secondary": null,
+     "label": "GRİ"
+    },
+    {
+     "id": "kirmizi",
+     "name": "Kirmizi",
+     "hex": "#C4232B",
+     "secondary": null,
+     "label": "KIRMIZI"
+    }
+   ],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p08-softshell-yelek-su-gecirmez/00.jpeg",
+    "/catalog/p08-softshell-yelek-su-gecirmez/02.jpeg",
+    "/catalog/p08-softshell-yelek-su-gecirmez/03.jpeg",
+    "/catalog/p08-softshell-yelek-su-gecirmez/04.jpeg"
+   ],
+   "sourcePage": 8,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq"
+   ],
+   "needsSplit": false
+  },
+  {
+   "id": "p09-3-cepli-yelek",
+   "slug": "3-cepli-yelek",
+   "name": "3 Cepli Yelek",
+   "catalogTitle": "3 CEPLİ YELEK",
+   "category": "yelek",
+   "subcategory": "is-yelegi",
+   "sectors": [
+    "endustri"
+   ],
+   "fabrics": [],
+   "colors": [
+    {
+     "id": "siyah",
+     "name": "Siyah",
+     "hex": "#101113",
+     "secondary": null,
+     "label": "SİYAH"
+    },
+    {
+     "id": "lacivert",
+     "name": "Lacivert",
+     "hex": "#1B2A4A",
+     "secondary": null,
+     "label": "LACİVERT"
+    },
+    {
+     "id": "haki-yesil",
+     "name": "Haki Yesil",
+     "hex": "#4A5340",
+     "secondary": null,
+     "label": "HAKİ YEŞİL"
+    }
+   ],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p09-3-cepli-yelek/01.jpeg",
+    "/catalog/p09-3-cepli-yelek/02.jpeg",
+    "/catalog/p09-3-cepli-yelek/03.jpeg"
+   ],
+   "sourcePage": 9,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq"
+   ],
+   "needsSplit": false
+  },
+  {
+   "id": "p09-ray-desenli-yelek",
+   "slug": "ray-desenli-yelek",
+   "name": "Ray Desenli Yelek",
+   "catalogTitle": "RAY DESENLİ YELEK",
+   "category": "yelek",
+   "subcategory": "is-yelegi",
+   "sectors": [
+    "endustri"
+   ],
+   "fabrics": [],
+   "colors": [
+    {
+     "id": "lacivert",
+     "name": "Lacivert",
+     "hex": "#1B2A4A",
+     "secondary": null,
+     "label": "LACİVERT"
+    },
+    {
+     "id": "siyah",
+     "name": "Siyah",
+     "hex": "#101113",
+     "secondary": null,
+     "label": "SİYAH"
+    },
+    {
+     "id": "mavi",
+     "name": "Mavi",
+     "hex": "#1E9BD8",
+     "secondary": null,
+     "label": "MAVİ"
+    }
+   ],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p09-ray-desenli-yelek/01.jpeg",
+    "/catalog/p09-ray-desenli-yelek/02.jpeg",
+    "/catalog/p09-ray-desenli-yelek/03.jpeg"
+   ],
+   "sourcePage": 9,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq"
+   ],
+   "needsSplit": false
+  },
+  {
+   "id": "p09-kapitoneli-yelek",
+   "slug": "kapitoneli-yelek",
+   "name": "Kapitoneli Yelek",
+   "catalogTitle": "KAPİTONELİ YELEK",
+   "category": "yelek",
+   "subcategory": "is-yelegi",
+   "sectors": [
+    "endustri"
+   ],
+   "fabrics": [],
+   "colors": [
+    {
+     "id": "haki-yesil",
+     "name": "Haki Yesil",
+     "hex": "#4A5340",
+     "secondary": null,
+     "label": "HAKİ YEŞİL"
+    },
+    {
+     "id": "kirmizi",
+     "name": "Kirmizi",
+     "hex": "#C4232B",
+     "secondary": null,
+     "label": "KIRMIZI"
+    },
+    {
+     "id": "lacivert",
+     "name": "Lacivert",
+     "hex": "#1B2A4A",
+     "secondary": null,
+     "label": "LACİVERT"
+    }
+   ],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p09-kapitoneli-yelek/01.jpeg",
+    "/catalog/p09-kapitoneli-yelek/02.jpeg",
+    "/catalog/p09-kapitoneli-yelek/03.jpeg"
+   ],
+   "sourcePage": 9,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq"
+   ],
+   "needsSplit": false
+  },
+  {
+   "id": "p10-askili-ve-kollu-tulum",
+   "slug": "askili-ve-kollu-tulum",
+   "name": "Askılı ve Kollu Tulum",
+   "catalogTitle": "ASKILI ve KOLLU TULUM",
+   "category": "tulum",
+   "subcategory": "tulum",
+   "sectors": [
+    "endustri",
+    "insaat"
+   ],
+   "fabrics": [],
+   "colors": [
+    {
+     "id": "lacivert",
+     "name": "Lacivert",
+     "hex": "#1B2A4A",
+     "secondary": null,
+     "label": "LACİVERT"
+    },
+    {
+     "id": "gri",
+     "name": "Gri",
+     "hex": "#6E7376",
+     "secondary": null,
+     "label": "GRİ"
+    },
+    {
+     "id": "turuncu",
+     "name": "Turuncu",
+     "hex": "#E4610F",
+     "secondary": null,
+     "label": "TURUNCU"
+    }
+   ],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p10-askili-ve-kollu-tulum/01.jpeg",
+    "/catalog/p10-askili-ve-kollu-tulum/02.jpeg",
+    "/catalog/p10-askili-ve-kollu-tulum/03.jpeg",
+    "/catalog/p10-askili-ve-kollu-tulum/04.jpeg",
+    "/catalog/p10-askili-ve-kollu-tulum/05.jpeg"
+   ],
+   "sourcePage": 10,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "urun-ayrimi"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p10-muhendis-yonetici-ikaz-yelegi",
+   "slug": "muhendis-yonetici-ikaz-yelegi",
+   "name": "Mühendis / Yönetici İkaz Yeleği",
+   "catalogTitle": "MÜHENDİS YÖNETİCİ İKAZ YELEĞİ",
+   "category": "yuksek-gorunurluk",
+   "subcategory": "ikaz-yelegi",
+   "sectors": [
+    "insaat",
+    "belediye"
+   ],
+   "fabrics": [],
+   "colors": [
+    {
+     "id": "turuncu",
+     "name": "Turuncu",
+     "hex": "#E4610F",
+     "secondary": null,
+     "label": "TURUNCU"
+    },
+    {
+     "id": "sari",
+     "name": "Sari",
+     "hex": "#D9D416",
+     "secondary": null,
+     "label": "SARI"
+    },
+    {
+     "id": "lacivert",
+     "name": "Lacivert",
+     "hex": "#1B2A4A",
+     "secondary": {
+      "id": "turuncu",
+      "name": "Turuncu",
+      "hex": "#E4610F"
+     },
+     "label": "TURUNCU - LACİVERT"
+    }
+   ],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p10-muhendis-yonetici-ikaz-yelegi/00.jpeg",
+    "/catalog/p10-muhendis-yonetici-ikaz-yelegi/02.jpeg",
+    "/catalog/p10-muhendis-yonetici-ikaz-yelegi/03.jpeg",
+    "/catalog/p10-muhendis-yonetici-ikaz-yelegi/04.jpeg",
+    "/catalog/p10-muhendis-yonetici-ikaz-yelegi/05.jpeg"
+   ],
+   "sourcePage": 10,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "sertifika"
+   ],
+   "needsSplit": false
+  },
+  {
+   "id": "p11-muhendis-ve-isci-ikaz-yelegi",
+   "slug": "muhendis-ve-isci-ikaz-yelegi",
+   "name": "Mühendis ve İşçi İkaz Yeleği",
+   "catalogTitle": "MÜHENDİS ve İŞÇİ İKAZ YELEĞİ",
+   "category": "yuksek-gorunurluk",
+   "subcategory": "ikaz-yelegi",
+   "sectors": [
+    "insaat",
+    "belediye"
+   ],
+   "fabrics": [],
+   "colors": [
+    {
+     "id": "sari",
+     "name": "Sari",
+     "hex": "#D9D416",
+     "secondary": null,
+     "label": "MÜHENDİS SARI"
+    },
+    {
+     "id": "turuncu",
+     "name": "Turuncu",
+     "hex": "#E4610F",
+     "secondary": null,
+     "label": "MÜHENDİS TURUNCU"
+    },
+    {
+     "id": "mavi",
+     "name": "Mavi",
+     "hex": "#1E9BD8",
+     "secondary": null,
+     "label": "MÜHENDİS MAVİ"
+    },
+    {
+     "id": "kirmizi",
+     "name": "Kirmizi",
+     "hex": "#C4232B",
+     "secondary": null,
+     "label": "KIRMIZI"
+    },
+    {
+     "id": "yesil",
+     "name": "Yesil",
+     "hex": "#9CC01A",
+     "secondary": null,
+     "label": "YEŞİL"
+    }
+   ],
+   "variantNotes": [
+    "Muhendis"
+   ],
+   "images": [
+    "/catalog/p11-muhendis-ve-isci-ikaz-yelegi/01.jpeg",
+    "/catalog/p11-muhendis-ve-isci-ikaz-yelegi/02.jpeg",
+    "/catalog/p11-muhendis-ve-isci-ikaz-yelegi/03.jpeg",
+    "/catalog/p11-muhendis-ve-isci-ikaz-yelegi/04.jpeg",
+    "/catalog/p11-muhendis-ve-isci-ikaz-yelegi/05.jpeg",
+    "/catalog/p11-muhendis-ve-isci-ikaz-yelegi/06.jpeg",
+    "/catalog/p11-muhendis-ve-isci-ikaz-yelegi/07.jpeg"
+   ],
+   "sourcePage": 11,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "urun-ayrimi",
+    "sertifika"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p11-5in1-kaban-ve-parka",
+   "slug": "5in1-kaban-ve-parka",
+   "name": "5in1 Kaban ve Parka",
+   "catalogTitle": "5İN1 KABAN ve PARKA",
+   "category": "yuksek-gorunurluk",
+   "subcategory": "kaban-parka",
+   "sectors": [
+    "insaat",
+    "belediye"
+   ],
+   "fabrics": [
+    "Bondit",
+    "Oxford Elyaflı"
+   ],
+   "colors": [
+    {
+     "id": "turuncu",
+     "name": "Turuncu",
+     "hex": "#E4610F",
+     "secondary": null,
+     "label": "5+1 TURUNCU"
+    },
+    {
+     "id": "sari",
+     "name": "Sari",
+     "hex": "#D9D416",
+     "secondary": null,
+     "label": "5+1 SARI"
+    },
+    {
+     "id": "siyah",
+     "name": "Siyah",
+     "hex": "#101113",
+     "secondary": null,
+     "label": "ELYAFLI SİYAH"
+    }
+   ],
+   "variantNotes": [
+    "5+1",
+    "Bondid Kumas",
+    "Elyafli",
+    "Oxfort Kumas"
+   ],
+   "images": [
+    "/catalog/p11-5in1-kaban-ve-parka/01.jpeg",
+    "/catalog/p11-5in1-kaban-ve-parka/02.jpeg",
+    "/catalog/p11-5in1-kaban-ve-parka/03.jpeg",
+    "/catalog/p11-5in1-kaban-ve-parka/04.jpeg",
+    "/catalog/p11-5in1-kaban-ve-parka/05.jpeg"
+   ],
+   "sourcePage": 11,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "urun-ayrimi",
+    "sertifika"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p12-is-ayakkabisi",
+   "slug": "is-ayakkabisi",
+   "name": "İş Ayakkabısı",
+   "catalogTitle": "İŞ AYAKKABISI",
+   "category": "ayakkabi",
+   "subcategory": "is-ayakkabisi",
+   "sectors": [
+    "endustri",
+    "insaat"
+   ],
+   "fabrics": [],
+   "colors": [],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p12-is-ayakkabisi/00.jpeg",
+    "/catalog/p12-is-ayakkabisi/01.jpeg",
+    "/catalog/p12-is-ayakkabisi/02.jpeg",
+    "/catalog/p12-is-ayakkabisi/03.jpeg",
+    "/catalog/p12-is-ayakkabisi/04.jpeg",
+    "/catalog/p12-is-ayakkabisi/05.jpeg",
+    "/catalog/p12-is-ayakkabisi/07.jpeg",
+    "/catalog/p12-is-ayakkabisi/08.jpeg",
+    "/catalog/p12-is-ayakkabisi/09.jpeg",
+    "/catalog/p12-is-ayakkabisi/10.jpeg"
+   ],
+   "sourcePage": 12,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "renk",
+    "urun-ayrimi",
+    "sertifika"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p13-ozel-guvenlik",
+   "slug": "ozel-guvenlik",
+   "name": "Özel Güvenlik Kıyafetleri",
+   "catalogTitle": "ÖZEL GÜVENLİK",
+   "category": "meslek-setleri",
+   "subcategory": "ozel-guvenlik",
+   "sectors": [
+    "guvenlik"
+   ],
+   "fabrics": [],
+   "colors": [],
+   "variantNotes": [
+    "Kaban",
+    "Kislik Sweat",
+    "Pantolon",
+    "Sapka",
+    "Softshell Mont",
+    "Tisort",
+    "Yagmurluk",
+    "Yazlik Kisa Kol"
+   ],
+   "images": [
+    "/catalog/p13-ozel-guvenlik/00.jpeg",
+    "/catalog/p13-ozel-guvenlik/01.jpeg",
+    "/catalog/p13-ozel-guvenlik/02.jpeg",
+    "/catalog/p13-ozel-guvenlik/04.jpeg",
+    "/catalog/p13-ozel-guvenlik/05.jpeg",
+    "/catalog/p13-ozel-guvenlik/06.jpeg",
+    "/catalog/p13-ozel-guvenlik/07.jpeg"
+   ],
+   "sourcePage": 13,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "renk",
+    "urun-ayrimi"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p14-pvc-yagmurluk",
+   "slug": "pvc-yagmurluk",
+   "name": "PVC Yağmurluk",
+   "catalogTitle": "PVC YAĞMURLUK",
+   "category": "yagmurluk",
+   "subcategory": "yagmurluk",
+   "sectors": [
+    "belediye",
+    "insaat"
+   ],
+   "fabrics": [
+    "PVC"
+   ],
+   "colors": [],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p14-pvc-yagmurluk/00.jpeg",
+    "/catalog/p14-pvc-yagmurluk/02.jpeg",
+    "/catalog/p14-pvc-yagmurluk/03.jpeg",
+    "/catalog/p14-pvc-yagmurluk/04.jpeg",
+    "/catalog/p14-pvc-yagmurluk/05.jpeg",
+    "/catalog/p14-pvc-yagmurluk/06.jpeg"
+   ],
+   "sourcePage": 14,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "renk"
+   ],
+   "needsSplit": false
+  },
+  {
+   "id": "p14-esofman-ve-forma-cesitleri",
+   "slug": "esofman-ve-forma-cesitleri",
+   "name": "Eşofman ve Forma Çeşitleri",
+   "catalogTitle": "EŞOFMAN ve FORMA ÇEŞİTLERİ",
+   "category": "spor",
+   "subcategory": "esofman-forma",
+   "sectors": [
+    "spor"
+   ],
+   "fabrics": [],
+   "colors": [],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p14-esofman-ve-forma-cesitleri/00.jpeg",
+    "/catalog/p14-esofman-ve-forma-cesitleri/01.jpeg",
+    "/catalog/p14-esofman-ve-forma-cesitleri/03.jpeg",
+    "/catalog/p14-esofman-ve-forma-cesitleri/04.jpeg"
+   ],
+   "sourcePage": 14,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "renk",
+    "urun-ayrimi"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p15-asci-uniformalari",
+   "slug": "asci-uniformalari",
+   "name": "Aşçı Üniformaları",
+   "catalogTitle": "AŞÇI ÜNİFORMALARI",
+   "category": "meslek-setleri",
+   "subcategory": "mutfak",
+   "sectors": [
+    "mutfak"
+   ],
+   "fabrics": [
+    "Alpaka"
+   ],
+   "colors": [],
+   "variantNotes": [
+    "Alpaka Asci Ceketi",
+    "Alpaka Askili Onluk"
+   ],
+   "images": [
+    "/catalog/p15-asci-uniformalari/01.jpeg",
+    "/catalog/p15-asci-uniformalari/02.jpeg",
+    "/catalog/p15-asci-uniformalari/03.jpeg",
+    "/catalog/p15-asci-uniformalari/04.jpeg",
+    "/catalog/p15-asci-uniformalari/05.jpeg",
+    "/catalog/p15-asci-uniformalari/06.jpeg"
+   ],
+   "sourcePage": 15,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "renk",
+    "urun-ayrimi"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p15-asci-takimi",
+   "slug": "asci-takimi",
+   "name": "Aşçı Takımı",
+   "catalogTitle": "AŞÇI TAKIMI",
+   "category": "meslek-setleri",
+   "subcategory": "mutfak",
+   "sectors": [
+    "mutfak"
+   ],
+   "fabrics": [],
+   "colors": [],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p15-asci-takimi/00.jpeg",
+    "/catalog/p15-asci-takimi/01.jpeg",
+    "/catalog/p15-asci-takimi/02.jpeg",
+    "/catalog/p15-asci-takimi/03.jpeg"
+   ],
+   "sourcePage": 15,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "renk",
+    "urun-ayrimi"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p16-hemsire-onlugu",
+   "slug": "hemsire-onlugu",
+   "name": "Hemşire Önlüğü",
+   "catalogTitle": "HEMŞİRE ÖNLÜĞÜ",
+   "category": "meslek-setleri",
+   "subcategory": "saglik",
+   "sectors": [
+    "saglik"
+   ],
+   "fabrics": [],
+   "colors": [],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p16-hemsire-onlugu/01.jpeg",
+    "/catalog/p16-hemsire-onlugu/02.jpeg",
+    "/catalog/p16-hemsire-onlugu/03.jpeg",
+    "/catalog/p16-hemsire-onlugu/04.jpeg"
+   ],
+   "sourcePage": 16,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "renk"
+   ],
+   "needsSplit": false
+  },
+  {
+   "id": "p16-doktor-onlugu",
+   "slug": "doktor-onlugu",
+   "name": "Doktor Önlüğü",
+   "catalogTitle": "DOKTOR ÖNLÜĞÜ",
+   "category": "meslek-setleri",
+   "subcategory": "saglik",
+   "sectors": [
+    "saglik"
+   ],
+   "fabrics": [],
+   "colors": [],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p16-doktor-onlugu/00.jpeg",
+    "/catalog/p16-doktor-onlugu/01.jpeg",
+    "/catalog/p16-doktor-onlugu/02.jpeg",
+    "/catalog/p16-doktor-onlugu/03.jpeg"
+   ],
+   "sourcePage": 16,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "renk"
+   ],
+   "needsSplit": false
+  },
+  {
+   "id": "p17-polyester-ve-gabardin-sapka",
+   "slug": "polyester-ve-gabardin-sapka",
+   "name": "Polyester ve Gabardin Şapka",
+   "catalogTitle": "POLYESTER ve GABARDİN ŞAPKA",
+   "category": "aksesuar",
+   "subcategory": "sapka",
+   "sectors": [
+    "endustri",
+    "belediye"
+   ],
+   "fabrics": [
+    "Polyester",
+    "Gabardin"
+   ],
+   "colors": [],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p17-polyester-ve-gabardin-sapka/00.jpeg",
+    "/catalog/p17-polyester-ve-gabardin-sapka/01.jpeg",
+    "/catalog/p17-polyester-ve-gabardin-sapka/02.jpeg",
+    "/catalog/p17-polyester-ve-gabardin-sapka/03.jpeg",
+    "/catalog/p17-polyester-ve-gabardin-sapka/04.png",
+    "/catalog/p17-polyester-ve-gabardin-sapka/06.jpeg",
+    "/catalog/p17-polyester-ve-gabardin-sapka/07.jpeg",
+    "/catalog/p17-polyester-ve-gabardin-sapka/08.jpeg",
+    "/catalog/p17-polyester-ve-gabardin-sapka/09.jpeg",
+    "/catalog/p17-polyester-ve-gabardin-sapka/10.jpeg",
+    "/catalog/p17-polyester-ve-gabardin-sapka/11.jpeg"
+   ],
+   "sourcePage": 17,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "renk",
+    "urun-ayrimi"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p18-polar-bere-ve-boyunluk",
+   "slug": "polar-bere-ve-boyunluk",
+   "name": "Polar Bere ve Boyunluk",
+   "catalogTitle": "POLAR BERE ve BOYUNLUK",
+   "category": "aksesuar",
+   "subcategory": "bere-boyunluk",
+   "sectors": [
+    "endustri",
+    "belediye"
+   ],
+   "fabrics": [
+    "Polar"
+   ],
+   "colors": [
+    {
+     "id": "lacivert",
+     "name": "Lacivert",
+     "hex": "#1B2A4A",
+     "secondary": null,
+     "label": "POLAR BERE LACİVERT"
+    },
+    {
+     "id": "siyah",
+     "name": "Siyah",
+     "hex": "#101113",
+     "secondary": null,
+     "label": "POLAR BERE SİYAH"
+    }
+   ],
+   "variantNotes": [
+    "Bere Cesitleri",
+    "Orme Eldiven",
+    "Ozel Baskili",
+    "Polar Bere",
+    "Polar Boyunluk & Bere"
+   ],
+   "images": [
+    "/catalog/p18-polar-bere-ve-boyunluk/01.jpeg",
+    "/catalog/p18-polar-bere-ve-boyunluk/02.jpeg",
+    "/catalog/p18-polar-bere-ve-boyunluk/03.png",
+    "/catalog/p18-polar-bere-ve-boyunluk/04.jpeg",
+    "/catalog/p18-polar-bere-ve-boyunluk/05.jpeg"
+   ],
+   "sourcePage": 18,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "urun-ayrimi"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p18-eldiven-cesitleri",
+   "slug": "eldiven-cesitleri",
+   "name": "Eldiven Çeşitleri",
+   "catalogTitle": "ELDİVEN ÇEŞİTLERİ",
+   "category": "aksesuar",
+   "subcategory": "eldiven",
+   "sectors": [
+    "endustri",
+    "insaat"
+   ],
+   "fabrics": [],
+   "colors": [],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p18-eldiven-cesitleri/00.jpeg",
+    "/catalog/p18-eldiven-cesitleri/01.jpeg",
+    "/catalog/p18-eldiven-cesitleri/03.jpeg",
+    "/catalog/p18-eldiven-cesitleri/04.jpeg"
+   ],
+   "sourcePage": 18,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "renk",
+    "urun-ayrimi"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p19-plastik-ve-metal-kalem-cesitleri",
+   "slug": "plastik-ve-metal-kalem-cesitleri",
+   "name": "Plastik ve Metal Kalem Çeşitleri",
+   "catalogTitle": "PLASTİK ve METAL KALEM ÇEŞİTLERİ",
+   "category": "promosyon",
+   "subcategory": "yazi-gerecleri",
+   "sectors": [],
+   "fabrics": [],
+   "colors": [],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p19-plastik-ve-metal-kalem-cesitleri/01.jpeg",
+    "/catalog/p19-plastik-ve-metal-kalem-cesitleri/02.jpeg",
+    "/catalog/p19-plastik-ve-metal-kalem-cesitleri/03.jpeg",
+    "/catalog/p19-plastik-ve-metal-kalem-cesitleri/04.jpeg",
+    "/catalog/p19-plastik-ve-metal-kalem-cesitleri/05.jpeg",
+    "/catalog/p19-plastik-ve-metal-kalem-cesitleri/06.jpeg"
+   ],
+   "sourcePage": 19,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "renk",
+    "urun-ayrimi"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p19-cakmak-cesitleri",
+   "slug": "cakmak-cesitleri",
+   "name": "Çakmak Çeşitleri",
+   "catalogTitle": "ÇAKMAK ÇEŞİTLERİ",
+   "category": "promosyon",
+   "subcategory": "yazi-gerecleri",
+   "sectors": [],
+   "fabrics": [],
+   "colors": [],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p19-cakmak-cesitleri/00.jpeg",
+    "/catalog/p19-cakmak-cesitleri/01.jpeg",
+    "/catalog/p19-cakmak-cesitleri/03.jpeg",
+    "/catalog/p19-cakmak-cesitleri/04.jpeg"
+   ],
+   "sourcePage": 19,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "renk",
+    "urun-ayrimi"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p20-ajanda-ve-defterler",
+   "slug": "ajanda-ve-defterler",
+   "name": "Ajanda ve Defterler",
+   "catalogTitle": "AJANDA ve DEFTERLER",
+   "category": "promosyon",
+   "subcategory": "ofis-masa",
+   "sectors": [],
+   "fabrics": [],
+   "colors": [],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p20-ajanda-ve-defterler/01.jpeg",
+    "/catalog/p20-ajanda-ve-defterler/02.jpeg",
+    "/catalog/p20-ajanda-ve-defterler/03.jpeg",
+    "/catalog/p20-ajanda-ve-defterler/04.jpeg",
+    "/catalog/p20-ajanda-ve-defterler/05.jpeg",
+    "/catalog/p20-ajanda-ve-defterler/06.jpeg"
+   ],
+   "sourcePage": 20,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "renk",
+    "urun-ayrimi"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p20-duvar-saatleri",
+   "slug": "duvar-saatleri",
+   "name": "Duvar Saatleri",
+   "catalogTitle": "DUVAR SAATLERİ",
+   "category": "promosyon",
+   "subcategory": "ofis-masa",
+   "sectors": [],
+   "fabrics": [],
+   "colors": [],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p20-duvar-saatleri/01.jpeg",
+    "/catalog/p20-duvar-saatleri/02.jpeg",
+    "/catalog/p20-duvar-saatleri/03.jpeg",
+    "/catalog/p20-duvar-saatleri/04.jpeg",
+    "/catalog/p20-duvar-saatleri/05.jpeg",
+    "/catalog/p20-duvar-saatleri/06.jpeg",
+    "/catalog/p20-duvar-saatleri/07.jpeg",
+    "/catalog/p20-duvar-saatleri/08.jpeg"
+   ],
+   "sourcePage": 20,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "renk",
+    "urun-ayrimi"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p21-kupa-ve-anahtarlik-cesitleri",
+   "slug": "kupa-ve-anahtarlik-cesitleri",
+   "name": "Kupa ve Anahtarlık Çeşitleri",
+   "catalogTitle": "KUPA ve ANAHTARLIK ÇEŞİTLERİ",
+   "category": "promosyon",
+   "subcategory": "icecek",
+   "sectors": [],
+   "fabrics": [],
+   "colors": [],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p21-kupa-ve-anahtarlik-cesitleri/00.jpeg",
+    "/catalog/p21-kupa-ve-anahtarlik-cesitleri/01.jpeg",
+    "/catalog/p21-kupa-ve-anahtarlik-cesitleri/03.jpeg",
+    "/catalog/p21-kupa-ve-anahtarlik-cesitleri/04.png",
+    "/catalog/p21-kupa-ve-anahtarlik-cesitleri/05.jpeg",
+    "/catalog/p21-kupa-ve-anahtarlik-cesitleri/06.jpeg",
+    "/catalog/p21-kupa-ve-anahtarlik-cesitleri/07.jpeg",
+    "/catalog/p21-kupa-ve-anahtarlik-cesitleri/08.jpeg",
+    "/catalog/p21-kupa-ve-anahtarlik-cesitleri/09.jpeg"
+   ],
+   "sourcePage": 21,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "renk",
+    "urun-ayrimi"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p21-matbaa-urunleri",
+   "slug": "matbaa-urunleri",
+   "name": "Matbaa Ürünleri",
+   "catalogTitle": "MATBAA ÜRÜNLERİ",
+   "category": "promosyon",
+   "subcategory": "matbaa",
+   "sectors": [],
+   "fabrics": [],
+   "colors": [],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p21-matbaa-urunleri/00.jpeg",
+    "/catalog/p21-matbaa-urunleri/02.jpeg",
+    "/catalog/p21-matbaa-urunleri/03.jpeg"
+   ],
+   "sourcePage": 21,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "renk",
+    "urun-ayrimi"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p22-termos-cesitleri",
+   "slug": "termos-cesitleri",
+   "name": "Termos Çeşitleri",
+   "catalogTitle": "TERMOS ÇEŞİTLERİ",
+   "category": "promosyon",
+   "subcategory": "icecek",
+   "sectors": [],
+   "fabrics": [],
+   "colors": [],
+   "variantNotes": [],
+   "images": [
+    "/catalog/p22-termos-cesitleri/01.jpeg",
+    "/catalog/p22-termos-cesitleri/02.jpeg",
+    "/catalog/p22-termos-cesitleri/03.jpeg",
+    "/catalog/p22-termos-cesitleri/04.jpeg",
+    "/catalog/p22-termos-cesitleri/05.jpeg",
+    "/catalog/p22-termos-cesitleri/06.jpeg",
+    "/catalog/p22-termos-cesitleri/07.jpeg",
+    "/catalog/p22-termos-cesitleri/08.jpeg"
+   ],
+   "sourcePage": 22,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "renk",
+    "urun-ayrimi"
+   ],
+   "needsSplit": true
+  },
+  {
+   "id": "p22-teknolojik-urun-ve-masa-setleri",
+   "slug": "teknolojik-urun-ve-masa-setleri",
+   "name": "Teknolojik Ürün ve Masa Setleri",
+   "catalogTitle": "TEKNOLOJİK ÜRÜN ve MASA SETLERİ",
+   "category": "promosyon",
+   "subcategory": "teknoloji",
+   "sectors": [],
+   "fabrics": [],
+   "colors": [],
+   "variantNotes": [
+    "Masa Set",
+    "Oreless Stand Set",
+    "Otlero",
+    "Powerbank",
+    "Usb Bellek Ces"
+   ],
+   "images": [
+    "/catalog/p22-teknolojik-urun-ve-masa-setleri/01.jpeg",
+    "/catalog/p22-teknolojik-urun-ve-masa-setleri/02.jpeg",
+    "/catalog/p22-teknolojik-urun-ve-masa-setleri/03.jpeg",
+    "/catalog/p22-teknolojik-urun-ve-masa-setleri/04.jpeg",
+    "/catalog/p22-teknolojik-urun-ve-masa-setleri/05.jpeg",
+    "/catalog/p22-teknolojik-urun-ve-masa-setleri/06.jpeg",
+    "/catalog/p22-teknolojik-urun-ve-masa-setleri/07.jpeg"
+   ],
+   "sourcePage": 22,
+   "sku": null,
+   "listPrice": null,
+   "currency": "TRY",
+   "moq": null,
+   "moqUnit": null,
+   "sizes": [],
+   "stockState": "TEYIT_GEREKLI",
+   "certifications": [],
+   "dataGaps": [
+    "sku",
+    "fiyat",
+    "beden",
+    "stok",
+    "moq",
+    "renk",
+    "urun-ayrimi"
+   ],
+   "needsSplit": true
+  }
+ ]
+}
