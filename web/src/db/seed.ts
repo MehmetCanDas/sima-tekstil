@@ -216,6 +216,117 @@ const run = db.transaction(() => {
 
 run();
 
+/* --------------------------- ana sayfa afisleri ---------------------- */
+/* Slayt ve giris kartlari normalde panelden (/admin/banner) yonetilir; taze
+   kurulumda ana sayfanin bos gorunmemesi icin bir baslangic seti yazilir.
+   home_banners tablosunda kayit varsa dokunulmaz. */
+
+const bannerCount = db.prepare("SELECT COUNT(*) AS n FROM home_banners").get() as {
+  n: number;
+};
+
+if (bannerCount.n === 0) {
+  const insertBanner = db.prepare(
+    `INSERT INTO home_banners
+       (id, kind, image_url, eyebrow, title, accent_title, subtitle,
+        cta_label, cta_href, cta2_label, cta2_href, sort_order, status,
+        created_at, updated_at)
+     VALUES
+       (@id, @kind, @image_url, @eyebrow, @title, @accent_title, @subtitle,
+        @cta_label, @cta_href, @cta2_label, @cta2_href, @sort_order, 'active',
+        @now, @now)`,
+  );
+
+  const banners = [
+    {
+      kind: "slide",
+      image_url: "/hero/slide-corp.jpg",
+      eyebrow: "Kurumsal & endüstriyel",
+      title: "Kaliteli iş kıyafeti,",
+      accent_title: "kendi markanızla",
+      subtitle: null,
+      cta_label: "Toptan Teklif Al",
+      cta_href: "/teklif",
+      cta2_label: "Logo Uygulaması",
+      cta2_href: "/logo-uygulama",
+      sort_order: 0,
+    },
+    {
+      kind: "slide",
+      image_url: "/hero/slide-hivis.jpg",
+      eyebrow: "Yüksek görünürlük",
+      title: "Sahada güvenlik,",
+      accent_title: "her vardiyada",
+      subtitle: null,
+      cta_label: "Ürünleri Gör",
+      cta_href: "/urunler?category=yuksek-gorunurluk",
+      cta2_label: null,
+      cta2_href: null,
+      sort_order: 1,
+    },
+    {
+      kind: "slide",
+      image_url: "/hero/slide-3.jpg",
+      eyebrow: "Nakış & baskı",
+      title: "Personeliniz,",
+      accent_title: "logonuzla giyinsin",
+      subtitle: null,
+      cta_label: "Katalogu İncele",
+      cta_href: "/urunler",
+      cta2_label: null,
+      cta2_href: null,
+      sort_order: 2,
+    },
+    {
+      kind: "card",
+      image_url: "/hero/card-1.jpg",
+      eyebrow: null,
+      title: "Hazır Stok & Toptan",
+      accent_title: null,
+      subtitle: "Katalogdan seçin, adetli sipariş verin",
+      cta_label: null,
+      cta_href: "/urunler",
+      cta2_label: null,
+      cta2_href: null,
+      sort_order: 0,
+    },
+    {
+      kind: "card",
+      image_url: "/hero/card-2.jpg",
+      eyebrow: null,
+      title: "Kendi Markanı Yarat",
+      accent_title: null,
+      subtitle: "Nakış ve baskı ile firmanıza özel",
+      cta_label: null,
+      cta_href: "/logo-uygulama",
+      cta2_label: null,
+      cta2_href: null,
+      sort_order: 1,
+    },
+    {
+      kind: "card",
+      image_url: "/hero/card-3.jpg",
+      eyebrow: null,
+      title: "Numune & Teklif",
+      accent_title: null,
+      subtitle: "Listenizi gönderin, aynı gün dönelim",
+      cta_label: null,
+      cta_href: "/teklif",
+      cta2_label: null,
+      cta2_href: null,
+      sort_order: 2,
+    },
+  ];
+
+  const writeBanners = db.transaction(() => {
+    for (const b of banners) {
+      insertBanner.run({ id: randomUUID(), now, ...b });
+    }
+  });
+  writeBanners();
+  console.log(`[db] ${banners.length} ana sayfa afişi eklendi`);
+}
+
 /* --------------------------- super admin ------------------------------ */
 
 const email = (process.env.ADMIN_EMAIL ?? "admin@simatekstil.local").toLowerCase();
