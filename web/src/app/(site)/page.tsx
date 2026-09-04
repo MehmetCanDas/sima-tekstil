@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Img as Image } from "@/components/Img";
 import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import { FeatureCards, type FeatureCard } from "@/components/FeatureCards";

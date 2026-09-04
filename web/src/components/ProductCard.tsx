@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Img as Image } from "@/components/Img";
 import Link from "next/link";
 
 import { money } from "@/lib/admin/format";
