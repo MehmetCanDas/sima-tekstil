@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+web/.next/
+web/out/
+web/.dev.log
+
+# TypeScript
+*.tsbuildinfo
+web/next-env.d.ts
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Database
+*.db
+*.db-wal
+*.db-shm
+web/data/
+
+# Uploads (runtime user content)
+web/public/uploads/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/

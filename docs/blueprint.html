@@ -1,0 +1,708 @@
+<title>Sima Wholesale Blueprint</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<style>
+:root{
+  --ground:#F5F6F3; --surface:#FFFFFF; --surface-2:#ECEFEA;
+  --ink:#15181A; --ink-2:#3D4441; --muted:#6B736D;
+  --rule:#DBDFD7; --rule-strong:#C2C8BE;
+  --accent:#1F4E46; --accent-soft:#E1EDE8;
+  --warn:#8E6412; --crit:#8E312A; --ok:#2C6A4E;
+  --shadow:0 1px 2px rgba(20,26,22,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#111412; --surface:#181C1A; --surface-2:#20251F;
+    --ink:#ECEFE9; --ink-2:#C3CAC2; --muted:#8B948B;
+    --rule:#2B322D; --rule-strong:#3B443D;
+    --accent:#79C4AC; --accent-soft:#1A2E29;
+    --warn:#D5A44B; --crit:#E08276; --ok:#6EBE95;
+    --shadow:0 1px 2px rgba(0,0,0,.4);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#111412; --surface:#181C1A; --surface-2:#20251F;
+  --ink:#ECEFE9; --ink-2:#C3CAC2; --muted:#8B948B;
+  --rule:#2B322D; --rule-strong:#3B443D;
+  --accent:#79C4AC; --accent-soft:#1A2E29;
+  --warn:#D5A44B; --crit:#E08276; --ok:#6EBE95;
+  --shadow:0 1px 2px rgba(0,0,0,.4);
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--ground); color:var(--ink);
+  font-family:"Newsreader",Georgia,"Times New Roman",serif;
+  font-size:17px; line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1160px; margin:0 auto; padding:0 24px 96px}
+
+.masthead{border-bottom:1px solid var(--rule-strong); padding:56px 0 28px; margin-bottom:48px}
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11.5px; font-weight:500;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--accent);
+}
+.masthead h1{
+  font-family:"Archivo",system-ui,sans-serif; font-weight:700;
+  font-size:clamp(34px,5.6vw,58px); line-height:1.02; letter-spacing:-.028em;
+  margin:14px 0 0; text-wrap:balance;
+}
+.dek{max-width:62ch; color:var(--ink-2); font-size:19px; margin:18px 0 0}
+.meta{
+  display:flex; flex-wrap:wrap; gap:10px 28px; margin-top:28px;
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12px; color:var(--muted);
+}
+.meta b{color:var(--ink-2); font-weight:500}
+
+.grid{display:grid; grid-template-columns:198px minmax(0,1fr); gap:56px; align-items:start}
+nav.toc{position:sticky; top:24px; max-height:calc(100vh - 48px); overflow-y:auto}
+nav.toc ol{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:2px}
+nav.toc a{
+  display:grid; grid-template-columns:26px 1fr; gap:6px; align-items:baseline;
+  font-family:"Archivo",system-ui,sans-serif; font-size:12.5px; line-height:1.35;
+  color:var(--muted); text-decoration:none; padding:4px 6px 4px 0; border-radius:2px;
+}
+nav.toc a span{font-family:"IBM Plex Mono",monospace; font-size:10.5px; color:var(--rule-strong)}
+nav.toc a:hover{color:var(--accent)}
+nav.toc a:hover span{color:var(--accent)}
+nav.toc a:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+
+main{min-width:0; max-width:74ch}
+
+section{padding-top:8px; margin-bottom:56px; scroll-margin-top:20px}
+section > h2{
+  font-family:"Archivo",system-ui,sans-serif; font-weight:600;
+  font-size:clamp(23px,3vw,30px); letter-spacing:-.018em; line-height:1.15;
+  margin:0 0 4px; text-wrap:balance;
+  display:grid; grid-template-columns:auto 1fr; gap:14px; align-items:baseline;
+}
+section > h2 .num{
+  font-family:"IBM Plex Mono",monospace; font-size:12px; font-weight:500;
+  color:var(--accent); letter-spacing:.06em;
+}
+.rule{height:1px; background:var(--rule); margin:14px 0 22px}
+h3{
+  font-family:"Archivo",system-ui,sans-serif; font-weight:600; font-size:16.5px;
+  letter-spacing:-.005em; margin:30px 0 8px; color:var(--ink);
+}
+p{margin:0 0 14px; max-width:68ch}
+ul,ol.body{margin:0 0 16px; padding-left:20px; max-width:68ch}
+li{margin-bottom:6px}
+strong{font-weight:500; color:var(--ink)}
+em{font-style:italic}
+code,.mono{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.87em}
+code{background:var(--surface-2); padding:1px 5px; border-radius:3px; color:var(--ink-2)}
+a{color:var(--accent)}
+
+.dissent{
+  background:var(--surface); border:1px solid var(--rule);
+  border-left:3px solid var(--accent); border-radius:0 4px 4px 0;
+  padding:18px 22px; margin:22px 0; box-shadow:var(--shadow);
+}
+.dissent > .tag{
+  font-family:"IBM Plex Mono",monospace; font-size:10.5px; font-weight:500;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--accent);
+  display:block; margin-bottom:8px;
+}
+.dissent p{font-size:16px}
+.dissent p:last-child{margin-bottom:0}
+
+.tablewrap{overflow-x:auto; margin:18px 0 24px; border:1px solid var(--rule); border-radius:4px; background:var(--surface)}
+table{border-collapse:collapse; width:100%; font-size:14px; min-width:520px}
+th,td{text-align:left; padding:9px 14px; border-bottom:1px solid var(--rule); vertical-align:top}
+thead th{
+  font-family:"Archivo",system-ui,sans-serif; font-weight:600; font-size:11.5px;
+  letter-spacing:.08em; text-transform:uppercase; color:var(--muted);
+  background:var(--surface-2); border-bottom:1px solid var(--rule-strong);
+}
+tbody tr:last-child td{border-bottom:0}
+td.f{font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:var(--ink); white-space:nowrap}
+td.n{font-variant-numeric:tabular-nums}
+
+.entity{border:1px solid var(--rule); border-radius:4px; background:var(--surface); margin:16px 0; overflow:hidden}
+.entity > header{
+  display:flex; flex-wrap:wrap; gap:10px; align-items:baseline; justify-content:space-between;
+  padding:11px 16px; background:var(--surface-2); border-bottom:1px solid var(--rule);
+}
+.entity > header h4{
+  margin:0; font-family:"IBM Plex Mono",monospace; font-size:13.5px; font-weight:500; color:var(--ink);
+}
+.entity > header .note{font-family:"Archivo",sans-serif; font-size:12px; color:var(--muted)}
+.fields{margin:0; padding:0; list-style:none}
+.fields li{
+  display:grid; grid-template-columns:minmax(150px,1.1fr) minmax(90px,.7fr) minmax(0,2fr);
+  gap:12px; padding:7px 16px; margin:0; border-bottom:1px solid var(--rule); font-size:13px; align-items:baseline;
+}
+.fields li:last-child{border-bottom:0}
+.fields .k{font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:var(--ink)}
+.fields .ty{font-family:"IBM Plex Mono",monospace; font-size:11.5px; color:var(--accent)}
+.fields .d{font-family:"Archivo",sans-serif; font-size:12.5px; color:var(--muted); line-height:1.45}
+.fields .d b{color:var(--ink-2); font-weight:600}
+
+.chip{
+  display:inline-block; font-family:"Archivo",sans-serif; font-size:10.5px; font-weight:600;
+  letter-spacing:.06em; text-transform:uppercase; padding:2px 7px; border-radius:2px;
+  border:1px solid currentColor; white-space:nowrap;
+}
+.chip.hi{color:var(--crit)} .chip.md{color:var(--warn)} .chip.lo{color:var(--ok)}
+.chip.mvp{color:var(--accent)}
+
+.risk{display:grid; grid-template-columns:78px minmax(0,1fr); gap:16px; padding:14px 0; border-bottom:1px solid var(--rule)}
+.risk:last-of-type{border-bottom:0}
+.risk h4{margin:0 0 4px; font-family:"Archivo",sans-serif; font-size:14.5px; font-weight:600}
+.risk p{margin:0; font-size:15px; color:var(--ink-2); max-width:60ch}
+.risk .sev{padding-top:2px}
+
+.tree{
+  font-family:"IBM Plex Mono",monospace; font-size:12.5px; line-height:1.85;
+  background:var(--surface); border:1px solid var(--rule); border-radius:4px;
+  padding:18px 20px; margin:18px 0 24px; overflow-x:auto; color:var(--ink-2); white-space:pre;
+}
+.tree b{color:var(--ink); font-weight:500}
+.tree i{color:var(--muted); font-style:normal}
+.tree u{color:var(--accent); text-decoration:none; font-weight:500}
+
+.phase{
+  display:grid; grid-template-columns:112px minmax(0,1fr); gap:20px;
+  padding:18px 0; border-top:1px solid var(--rule);
+}
+.phase:last-of-type{border-bottom:1px solid var(--rule)}
+.phase .when{font-family:"IBM Plex Mono",monospace; font-size:11.5px; color:var(--accent); letter-spacing:.06em; padding-top:3px}
+.phase h4{margin:0 0 6px; font-family:"Archivo",sans-serif; font-size:15.5px; font-weight:600}
+.phase ul{margin:0; padding-left:18px; font-size:15px; color:var(--ink-2)}
+
+.journey{display:flex; flex-direction:column; margin:18px 0 24px}
+.step{display:grid; grid-template-columns:34px minmax(0,1fr); gap:14px; padding:12px 0; border-bottom:1px dashed var(--rule)}
+.step:last-child{border-bottom:0}
+.step .i{font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--accent); padding-top:3px}
+.step h4{margin:0 0 3px; font-family:"Archivo",sans-serif; font-size:14.5px; font-weight:600}
+.step p{margin:0; font-size:14.5px; color:var(--ink-2); max-width:58ch}
+
+.personas{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1px; background:var(--rule);
+  border:1px solid var(--rule); border-radius:4px; overflow:hidden; margin:18px 0 24px}
+.persona{background:var(--surface); padding:16px 18px}
+.persona h4{margin:0 0 2px; font-family:"Archivo",sans-serif; font-size:14.5px; font-weight:600}
+.persona .role{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--accent); display:block; margin-bottom:9px; letter-spacing:.04em}
+.persona p{font-size:14px; margin:0 0 8px; color:var(--ink-2)}
+.persona .need{font-family:"Archivo",sans-serif; font-size:12.5px; color:var(--muted); border-top:1px solid var(--rule); padding-top:8px; margin:0}
+
+.ask{background:var(--accent-soft); border:1px solid var(--rule); border-radius:4px; padding:26px 28px}
+.ask > h2{margin-top:0}
+.ask .q{font-weight:500; color:var(--ink)}
+
+footer{margin-top:64px; padding-top:20px; border-top:1px solid var(--rule-strong);
+  font-family:"IBM Plex Mono",monospace; font-size:11.5px; color:var(--muted); display:flex; flex-wrap:wrap; gap:8px 24px}
+
+@media (max-width:900px){
+  .grid{grid-template-columns:1fr; gap:0}
+  nav.toc{position:static; max-height:none; margin-bottom:40px; padding-bottom:24px; border-bottom:1px solid var(--rule)}
+  nav.toc ol{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:2px 14px}
+  main{max-width:none}
+  body{font-size:16.5px}
+  .fields li{grid-template-columns:1fr; gap:2px}
+  .risk{grid-template-columns:1fr; gap:6px}
+  .phase{grid-template-columns:1fr; gap:6px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <span class="eyebrow">Faz 1 &mdash; Ke&#351;if &amp; Mimari</span>
+  <h1>Sima Wholesale Blueprint</h1>
+  <p class="dek">Toptan tekstil satışını dijitalleştiren bir B2B commerce platformunun ürün vizyonu, veri modeli, teknoloji seçimleri ve yol haritası. Kod yazılmadan önce alınması gereken kararlar.</p>
+  <div class="meta">
+    <span><b>Durum</b> · Taslak, katalog bekleniyor</span>
+    <span><b>Kapsam</b> · Faz 1/9</span>
+    <span><b>Tarih</b> · 2 Eylül 2026</span>
+    <span><b>Marka adı</b> · geçici</span>
+  </div>
+</header>
+
+<div class="grid">
+
+<nav class="toc" aria-label="İçindekiler">
+  <ol>
+    <li><a href="#s1"><span>01</span>Ürün Vizyonu</a></li>
+    <li><a href="#s2"><span>02</span>Hedef Müşteriler</a></li>
+    <li><a href="#s3"><span>03</span>Personalar</a></li>
+    <li><a href="#s4"><span>04</span>Kullanıcı Yolculuğu</a></li>
+    <li><a href="#s5"><span>05</span>MVP Kapsamı</a></li>
+    <li><a href="#s6"><span>06</span>Gelecek Özellikler</a></li>
+    <li><a href="#s7"><span>07</span>Sitemap</a></li>
+    <li><a href="#s8"><span>08</span>Veri Modeli</a></li>
+    <li><a href="#s9"><span>09</span>Teknoloji Yığını</a></li>
+    <li><a href="#s10"><span>10</span>AI Mimarisi</a></li>
+    <li><a href="#s11"><span>11</span>Admin Mimarisi</a></li>
+    <li><a href="#s12"><span>12</span>SEO Stratejisi</a></li>
+    <li><a href="#s13"><span>13</span>UX/UI Stratejisi</a></li>
+    <li><a href="#s14"><span>14</span>Güvenlik Riskleri</a></li>
+    <li><a href="#s15"><span>15</span>Ölçek Riskleri</a></li>
+    <li><a href="#s16"><span>16</span>Yol Haritası</a></li>
+    <li><a href="#ask"><span>&rarr;</span>Sıradaki Adım</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<section id="s1">
+  <h2><span class="num">01</span>Ürün Vizyonu</h2>
+  <div class="rule"></div>
+  <p>Bir toptan tekstil firmasının bugün WhatsApp, Excel dosyaları ve PDF katalog üzerinden yürüttüğü satış sürecini; ürünün keşfedilmesinden teklifin onaylanmasına kadar tek bir yerde toplayan bir <strong>B2B sipariş kanalı</strong>. Vaat şu: alıcı satıcıya mesaj atmadan ne aldığını, kaça aldığını ve ne zaman geleceğini görebilsin; satıcı da her teklifi elle yazmasın.</p>
+  <p>Bu bir mağaza değil, bir <em>satış operasyonu aracı</em>. Başarı metriği ziyaretçi sayısı değil, <strong>elle yazılan teklif oranının düşmesi</strong> ve <strong>ilk temastan siparişe geçen süre</strong>.</p>
+
+  <div class="dissent">
+    <span class="tag">Karşı görüş &mdash; "SaaS" kelimesi</span>
+    <p>Brief boyunca "SaaS platform" diyorsun ama tarif ettiğin şey <strong>tek bir firmanın toptan satış sitesi</strong>. Bunlar aynı ürün değil. Gerçek SaaS demek multi-tenant veri izolasyonu, tenant başına domain, abonelik faturalama, tenant başına tema &mdash; MVP'yi üç katına çıkaran ve bugün <em>hiçbir</em> müşteriye fayda sağlamayan bir yük.</p>
+    <p>Önerim: <strong>single-tenant kur, multi-tenant'a hazır yaz.</strong> Pratikte bu şu demek: her sorgu bir repository katmanından geçsin, hiçbir yerde global sabit firma bilgisi olmasın, ayarlar bir <code>settings</code> tablosunda dursun. Gerçekten ikinci bir firmaya satma noktasına gelirsen <code>tenant_id</code> eklemek iki haftalık iş olur; şimdiden multi-tenant yazmak iki aylık gecikme.</p>
+  </div>
+</section>
+
+<section id="s2">
+  <h2><span class="num">02</span>Hedef Müşteriler</h2>
+  <div class="rule"></div>
+  <p>Listelediğin yedi grup tek bir kitle değil; <strong>iki farklı satın alma davranışı</strong> içeriyor ve bu ayrım tüm arayüzü belirliyor.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Segment</th><th>Sipariş büyüklüğü</th><th>Beklenti</th><th>Öncelik</th></tr></thead>
+    <tbody>
+      <tr><td>Butik / küçük mağaza</td><td class="n">100&ndash;500 adet</td><td>Fiyatı hemen görmek, havaleyle ödemek, karışık beden koli</td><td><span class="chip mvp">MVP</span></td></tr>
+      <tr><td>E-ticaret &amp; Instagram satıcısı</td><td class="n">50&ndash;300 adet</td><td>Düşük MOQ, güncel stok, ürün görselini kendi ilanında kullanmak</td><td><span class="chip mvp">MVP</span></td></tr>
+      <tr><td>Orta ölçekli zincir</td><td class="n">1.000+ adet</td><td>Pazarlık, vadeli ödeme, cari hesap, özel fiyat listesi</td><td><span class="chip md">Faz 2</span></td></tr>
+      <tr><td>Yurtdışı toptancı / ihracat</td><td>Konteyner</td><td>İngilizce, USD/EUR, proforma fatura, Incoterms, numune</td><td><span class="chip md">Faz 2</span></td></tr>
+      <tr><td>Diğer tekstil firmaları (fason)</td><td>Değişken</td><td>Özel üretim, kumaş/gramaj detayı, numune süreci</td><td><span class="chip lo">Faz 3</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>İlk iki segment <strong>self-servis</strong> davranır: siteye girer, ürünü bulur, sepete atar, sipariş verir. Alt üç segment <strong>ilişkisel</strong> davranır: siteyi katalog olarak kullanır, kapanış insan eliyle olur. MVP birinci gruba, teklif sistemi ikinci gruba hizmet eder.</p>
+</section>
+
+<section id="s3">
+  <h2><span class="num">03</span>Personalar</h2>
+  <div class="rule"></div>
+  <div class="personas">
+    <div class="persona">
+      <h4>Elif</h4><span class="role">Butik sahibi · 32 · İzmir</span>
+      <p>Sezon başında 8&ndash;10 model, model başına 60&ndash;120 adet alıyor. Telefonda fiyat sormaktan yoruldu, gece 23:00'te sipariş vermek istiyor.</p>
+      <p class="need">İhtiyacı: fiyatı üye olmadan görmek, beden dağılımını kendi girmek.</p>
+    </div>
+    <div class="persona">
+      <h4>Burak</h4><span class="role">E-ticaret satıcısı · 27 · pazaryeri</span>
+      <p>Stoksuz satış yapıyor, sürekli stok teyidi istiyor. Ürün görsellerini kendi ilanında kullanacak.</p>
+      <p class="need">İhtiyacı: güncel stok, yüksek çözünürlüklü görsel, SKU ile hızlı arama.</p>
+    </div>
+    <div class="persona">
+      <h4>Haddad</h4><span class="role">İthalatçı · 45 · Dubai</span>
+      <p>Karışık konteyner alıyor. WhatsApp'tan Excel istiyor, İngilizce iletişim kuruyor, proforma bekliyor.</p>
+      <p class="need">İhtiyacı: EN dil, USD fiyat, teklifin PDF/Excel çıktısı.</p>
+    </div>
+    <div class="persona">
+      <h4>Ayşe</h4><span class="role">Satış sorumlusu · firma içi</span>
+      <p>Günde onlarca teklif hazırlıyor. Fiyatı Excel'den bakıyor, stok teyidini depoya soruyor.</p>
+      <p class="need">İhtiyacı: gelen talebi iki dakikada teklife çevirmek, fiyatı tek yerden yönetmek.</p>
+    </div>
+  </div>
+  <p>Ayşe'yi listeye bilerek koydum. <strong>Bu platformun en sık kullanıcısı müşteri değil, firmanın kendi satış ekibi.</strong> Admin paneli "sonradan yaparız" denecek bir ek değil, ürünün yarısı.</p>
+</section>
+
+<section id="s4">
+  <h2><span class="num">04</span>Çekirdek Kullanıcı Yolculuğu</h2>
+  <div class="rule"></div>
+  <div class="journey">
+    <div class="step"><span class="i">01</span><div><h4>Keşif</h4><p>Google'da "toptan oversize tişört" araması ya da Instagram bio linki. İniş noktası çoğunlukla ana sayfa değil, <strong>kategori veya ürün sayfası</strong>. Bu yüzden her ürün sayfası tek başına "ne satıyoruz, toptan mı, nasıl alınır" sorularını cevaplamalı.</p></div></div>
+    <div class="step"><span class="i">02</span><div><h4>Değerlendirme</h4><p>Fiyat, MOQ ve stok üç saniyede görünmeli. Görünmezse kullanıcı çıkar &mdash; B2B alıcı form doldurup fiyat beklemez, rakibe bakar.</p></div></div>
+    <div class="step"><span class="i">03</span><div><h4>Beden dağılımı</h4><p>Ürün sayfasında renk seçilir, beden bazında adet girilir (S:20 M:30 L:30 XL:20). Bu ekran B2C'den en çok ayrışan yer ve mobilde çalışması en zor olan bileşen.</p></div></div>
+    <div class="step"><span class="i">04</span><div><h4>Sipariş taslağı</h4><p>Birden çok model biriktirilir. MOQ kontrolü yalnızca ürün bazında değil, <strong>sipariş bazında</strong> da yapılır (toplam adet veya tutar eşiği).</p></div></div>
+    <div class="step"><span class="i">05</span><div><h4>Gönderim</h4><p>Kayıtlı kullanıcı sipariş oluşturur; misafir teklif talebi bırakır. Her ikisi de admin tarafında <em>aynı kuyruğa</em> düşer.</p></div></div>
+    <div class="step"><span class="i">06</span><div><h4>Onay &amp; ödeme</h4><p>Firma stok/fiyat teyidi yapar, proforma gönderir. Ödeme MVP'de site dışında (havale/EFT). Durum değişimleri e-posta ve WhatsApp ile bildirilir.</p></div></div>
+    <div class="step"><span class="i">07</span><div><h4>Takip &amp; tekrar sipariş</h4><p>Kargo takip numarası hesapta görünür. <strong>"Aynısını tekrar sipariş et"</strong> düğmesi &mdash; B2B'de gelirin çoğu ikinci ve üçüncü siparişten gelir; bu tek düğme, elde tutmanın kendisidir.</p></div></div>
+  </div>
+
+  <div class="dissent">
+    <span class="tag">Karşı görüş &mdash; Sepet ve teklif ayrı olmasın</span>
+    <p>Brief'te "B2B Sepet" (bölüm 4) ve "Teklif Sistemi" (bölüm 5) iki ayrı özellik olarak duruyor. İkisini ayrı inşa edersek iki akış, iki tablo, iki admin ekranı ve kullanıcı için bir karar yükü ("sepete mi atsam, teklif mi istesem?") çıkar.</p>
+    <p>Önerim: tek bir <strong>Sipariş Taslağı</strong> nesnesi. Kullanıcı ürün biriktirir; gönderirken çıktı bağlama göre <code>ORDER</code> (fiyatlar net, kayıtlı müşteri) ya da <code>QUOTE</code> (fiyat teyide tabi, misafir veya özel talep) olur. Aynı tablo, tek bir <code>type</code> alanı. Admin tek kuyruk görür, teklifi tek tıkla siparişe çevirir. Bu yapı, ileride "müşteriye özel fiyat" geldiğinde de kırılmaz.</p>
+  </div>
+</section>
+
+<section id="s5">
+  <h2><span class="num">05</span>MVP Kapsamı</h2>
+  <div class="rule"></div>
+  <p>Kural: MVP, <strong>bir alıcının tek başına sipariş bırakabildiği</strong> en küçük sistemdir. Bunu engellemeyen her şey ertelenir.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Alan</th><th>MVP'de var</th><th>MVP'de yok &mdash; gerekçe</th></tr></thead>
+    <tbody>
+      <tr><td>Katalog</td><td>Kategori, filtre, sıralama, sunucu tarafı sayfalama</td><td>Sonsuz kaydırma &mdash; SEO ve durum yönetimi zayıf</td></tr>
+      <tr><td>Ürün</td><td>Galeri + zoom, renk/beden matrisi, kumaş, MOQ, beden tablosu</td><td>360° görsel, video, kumaş yakın çekimi</td></tr>
+      <tr><td>Arama</td><td>Postgres FTS + trigram, SKU tam eşleşme, autocomplete</td><td>Semantik / doğal dil arama</td></tr>
+      <tr><td>Sipariş</td><td>Taslak &rarr; gönderim, MOQ doğrulama, e-posta bildirimi</td><td>Online ödeme, kargo API entegrasyonu</td></tr>
+      <tr><td>Hesap</td><td>Onaylı kayıt, sipariş geçmişi, favoriler, adresler</td><td>Cari hesap ekstresi, firma içi kullanıcı rolleri</td></tr>
+      <tr><td>Admin</td><td>Ürün/varyant/görsel/stok/fiyat yönetimi, sipariş kuyruğu, toplu import</td><td>Raporlama panosu, kampanya motoru</td></tr>
+      <tr><td>Dil / Para</td><td>TR arayüz; şema ve fiyat katmanı çok dilli ve çok para birimli</td><td>EN arayüz metinleri, canlı kur çevrimi</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="dissent">
+    <span class="tag">Karşı görüş &mdash; Online ödeme MVP'de olmamalı</span>
+    <p>Toptan tekstilde ödeme neredeyse hiç kartla yapılmaz: havale, vadeli çek, kısmi kapora. Sanal POS entegrasyonu komisyon maliyeti, PCI yükü, iade/iptal akışı ve chargeback riski getirir &mdash; karşılığında <em>kimsenin kullanmayacağı</em> bir düğme. Ödeme, gerçek siparişler akmaya başlayıp müşteri talep ettiğinde eklenmeli.</p>
+  </div>
+  <div class="dissent">
+    <span class="tag">Karar gerekiyor &mdash; Fiyat herkese açık mı?</span>
+    <p>İki seçenek de savunulabilir. <strong>(A) Açık fiyat:</strong> SEO ve dönüşüm için en iyisi, ama rakip firmalar fiyat listeni anlık görür. <strong>(B) Üyeliğe kapalı fiyat:</strong> fiyat korunur, ama Google ürün sayfalarını zayıf indeksler ve ilk ziyaretçilerin çoğu kaydolmadan gider.</p>
+    <p>Önerim <strong>hibrit</strong>: liste fiyatı ve MOQ herkese açık; <em>adet kademeli indirim ve müşteriye özel fiyat</em> üyeliğe kapalı. Bu kararı sen vermelisin &mdash; veri modelini ve SEO stratejisini doğrudan etkiliyor.</p>
+  </div>
+</section>
+
+<section id="s6">
+  <h2><span class="num">06</span>Gelecek Özellikler</h2>
+  <div class="rule"></div>
+  <ul>
+    <li><strong>Müşteriye özel fiyat listesi</strong> &mdash; sözleşmeli alıcıya iskonto; <code>price_list</code> + <code>customer_group</code> ile.</li>
+    <li><strong>Adet kademeli fiyat</strong> &mdash; 100+ / 500+ / 1000+ eşikleri.</li>
+    <li><strong>Cari hesap &amp; vade</strong> &mdash; bakiye, ekstre, kredi limiti. Muhasebe entegrasyonu gerektirir (Logo, Netsis, Paraşüt).</li>
+    <li><strong>Numune siparişi</strong> &mdash; 1&ndash;3 adetlik numune akışı; tekstilde satın alma kararının kritik adımı.</li>
+    <li><strong>Özel üretim (fason) talebi</strong> &mdash; kumaş, baskı, etiket ve adet bilgisiyle brief formu.</li>
+    <li><strong>Katalog PDF üretimi</strong> &mdash; seçilen ürünlerden markalı PDF; satış ekibinin WhatsApp'ta paylaşacağı çıktı.</li>
+    <li><strong>Görsel indirme paketi</strong> &mdash; bayinin kendi ilanı için ZIP.</li>
+    <li><strong>Kargo/lojistik entegrasyonu</strong> &mdash; takip numarası otomasyonu.</li>
+    <li><strong>Çok kullanıcılı firma hesabı</strong> &mdash; satın almacı ekleme, onay akışı.</li>
+    <li><strong>EN arayüz + USD/EUR + proforma</strong> &mdash; ihracat segmenti açıldığında.</li>
+  </ul>
+</section>
+
+<section id="s7">
+  <h2><span class="num">07</span>Sitemap</h2>
+  <div class="rule"></div>
+<div class="tree"><b>/</b>                                <i>ana sayfa</i>
+<b>/urunler</b>                        <i>tüm katalog · filtre + sayfalama</i>
+<b>/kategori/[slug]</b>                <i>SEO iniş sayfası · /kategori/tisort</i>
+<b>/kategori/[slug]/[alt]</b>          <i>/kategori/tisort/oversize</i>
+<b>/urun/[slug]</b>                    <i>ürün detay · canonical</i>
+<b>/arama?q=</b>                       <i>arama sonuçları · noindex</i>
+<b>/koleksiyon/[slug]</b>              <i>sezon / kampanya · faz 2</i>
+
+<b>/sepet</b>                          <i>sipariş taslağı</i>
+<b>/siparis/olustur</b>                <i>gönderim formu</i>
+<b>/siparis/tesekkurler/[ref]</b>
+<b>/teklif-al</b>                      <i>serbest teklif formu</i>
+
+<b>/hesap</b>                          <i>giriş gerekli · noindex</i>
+<b>/hesap/siparisler</b> · <b>/[id]</b>
+<b>/hesap/teklifler</b>
+<b>/hesap/favoriler</b>
+<b>/hesap/adresler</b>
+<b>/hesap/firma</b>                    <i>vergi / fatura bilgileri</i>
+<b>/hesap/profil</b>
+<b>/giris</b> · <b>/kayit</b> · <b>/sifre-sifirla</b>
+
+<b>/hakkimizda</b> · <b>/iletisim</b> · <b>/sss</b>
+<b>/toptan-alim</b>                    <i>MOQ, ödeme, sevkiyat koşulları</i>
+<b>/kargo-teslimat</b> · <b>/iade-degisim</b>
+<b>/gizlilik</b> · <b>/kvkk</b> · <b>/kullanim-kosullari</b>
+
+<b>/admin</b>                          <i>ayrı layout · noindex</i>
+  <b>/urunler</b> · <b>/urunler/[id]</b> · <b>/urunler/yeni</b>
+  <b>/kategoriler</b> · <b>/stok</b> · <b>/fiyatlar</b>
+  <b>/siparisler</b> · <b>/teklifler</b> · <b>/musteriler</b>
+  <b>/import</b>                       <i>katalog aktarım + onay ekranı</i>
+  <b>/ayarlar</b>
+
+<b>/sitemap.xml</b> · <b>/robots.txt</b></div>
+  <p>URL'ler Türkçe. Sebep: birincil pazar Türkiye, arama hacmi Türkçe ve Türkçe slug tıklama oranını yükseltiyor. İngilizce sürüm geldiğinde <code>/en/products/...</code> altında kendi slug'ıyla yaşar; <code>hreflang</code> ikisini bağlar.</p>
+</section>
+
+<section id="s8">
+  <h2><span class="num">08</span>Ürün Veri Modeli</h2>
+  <div class="rule"></div>
+  <p>Önerdiğin şemadan üç yerde ayrılıyorum; gerekçeleri aşağıda. Şema PostgreSQL varsayımıyla yazıldı. Para alanları <code>decimal(12,2)</code> &mdash; hiçbir yerde kayan noktalı sayı yok.</p>
+
+  <div class="entity">
+    <header><h4>Product</h4><span class="note">satılabilir model &mdash; varyantların ortak gövdesi</span></header>
+    <ul class="fields">
+      <li><span class="k">id</span><span class="ty">uuid</span><span class="d">birincil anahtar</span></li>
+      <li><span class="k">sku_base</span><span class="ty">text</span><span class="d">model kodu, tekil · varyant SKU'ları bundan türer</span></li>
+      <li><span class="k">slug</span><span class="ty">citext</span><span class="d">tekil ve kalıcı · değişirse 301 için slug geçmişi tutulur</span></li>
+      <li><span class="k">status</span><span class="ty">enum</span><span class="d">DRAFT · ACTIVE · ARCHIVED &mdash; silme yok, arşivleme var</span></li>
+      <li><span class="k">category_id</span><span class="ty">uuid</span><span class="d">Category ağacına bağ</span></li>
+      <li><span class="k">gender</span><span class="ty">enum</span><span class="d">KADIN · ERKEK · UNISEX · COCUK</span></li>
+      <li><span class="k">fabric_id</span><span class="ty">uuid?</span><span class="d">Fabric referansı &mdash; serbest metin değil</span></li>
+      <li><span class="k">gsm</span><span class="ty">int?</span><span class="d">gramaj · tekstilde birincil filtre kriteri</span></li>
+      <li><span class="k">fit</span><span class="ty">text?</span><span class="d">oversize / regular / slim</span></li>
+      <li><span class="k">moq</span><span class="ty">int</span><span class="d">minimum sipariş adedi</span></li>
+      <li><span class="k">moq_unit</span><span class="ty">enum</span><span class="d">ADET · KOLI · SERI &mdash; <b>tekstilde "seri" gerçek bir birim</b></span></li>
+      <li><span class="k">list_price</span><span class="ty">decimal?</span><span class="d">boş = "fiyat için teklif alın"</span></li>
+      <li><span class="k">currency</span><span class="ty">char(3)</span><span class="d">TRY · USD · EUR &mdash; fiyat çevrilmez, kaynağında saklanır</span></li>
+      <li><span class="k">is_price_public</span><span class="ty">bool</span><span class="d">fiyat görünürlüğü ürün bazında kararlaştırılabilir</span></li>
+      <li><span class="k">source_ref</span><span class="ty">text?</span><span class="d">katalogdaki sayfa/satır &mdash; import izlenebilirliği</span></li>
+      <li><span class="k">data_quality</span><span class="ty">jsonb</span><span class="d">eksik alanların listesi · admin uyarısı için</span></li>
+      <li><span class="k">created_at / updated_at</span><span class="ty">timestamptz</span><span class="d"></span></li>
+    </ul>
+  </div>
+
+  <div class="entity">
+    <header><h4>ProductVariant</h4><span class="note">stok ve fiyatın gerçek sahibi</span></header>
+    <ul class="fields">
+      <li><span class="k">product_id</span><span class="ty">uuid</span><span class="d">Product'a bağ, cascade</span></li>
+      <li><span class="k">sku</span><span class="ty">text</span><span class="d">tekil · örn. TS-1042-SYH-M</span></li>
+      <li><span class="k">color_id</span><span class="ty">uuid</span><span class="d">Color referansı</span></li>
+      <li><span class="k">size_id</span><span class="ty">uuid</span><span class="d">Size referansı · sıralı (XS &lt; S &lt; M &lt; L)</span></li>
+      <li><span class="k">stock_qty</span><span class="ty">int</span><span class="d">gerçek sayı &mdash; kullanıcıya ham gösterilmez</span></li>
+      <li><span class="k">stock_state</span><span class="ty">enum</span><span class="d">VAR · SINIRLI · TUKENDI · URETIME_BAGLI (hesaplanan)</span></li>
+      <li><span class="k">price_override</span><span class="ty">decimal?</span><span class="d">büyük beden farkı gibi istisnalar</span></li>
+      <li><span class="k">barcode</span><span class="ty">text?</span><span class="d">ileride depo/ERP eşleşmesi için</span></li>
+      <li><span class="k">is_active</span><span class="ty">bool</span><span class="d"></span></li>
+    </ul>
+  </div>
+
+  <div class="entity">
+    <header><h4>Color · Size · Fabric · Category</h4><span class="note">referans tablolar</span></header>
+    <ul class="fields">
+      <li><span class="k">Color</span><span class="ty">tablo</span><span class="d">name_tr, name_en, hex, slug &mdash; "Siyah / SİYAH / black" üçünün tek kayda eşlenmesi için</span></li>
+      <li><span class="k">Size</span><span class="ty">tablo</span><span class="d">label, sort_order, size_system (alfa / numerik / çocuk)</span></li>
+      <li><span class="k">Fabric</span><span class="ty">tablo</span><span class="d">name, composition (%100 pamuk), care_instructions</span></li>
+      <li><span class="k">Category</span><span class="ty">tablo</span><span class="d">parent_id ile ağaç, slug, seo_title, seo_description, sort_order</span></li>
+    </ul>
+  </div>
+
+  <div class="entity">
+    <header><h4>ProductImage</h4><span class="note">varyanta bağlanabilir</span></header>
+    <ul class="fields">
+      <li><span class="k">product_id</span><span class="ty">uuid</span><span class="d"></span></li>
+      <li><span class="k">variant_id</span><span class="ty">uuid?</span><span class="d">renk seçilince galeri değişsin diye</span></li>
+      <li><span class="k">storage_key</span><span class="ty">text</span><span class="d">tam URL değil &mdash; CDN/bucket taşınabilir kalsın</span></li>
+      <li><span class="k">alt_tr / alt_en</span><span class="ty">text</span><span class="d">SEO ve erişilebilirlik</span></li>
+      <li><span class="k">width / height / blur_hash</span><span class="ty">int / text</span><span class="d">düzen kaymasını (CLS) önlemek için zorunlu</span></li>
+      <li><span class="k">sort_order</span><span class="ty">int</span><span class="d"></span></li>
+    </ul>
+  </div>
+
+  <div class="entity">
+    <header><h4>OrderDraft</h4><span class="note">sepet ve teklif aynı nesne</span></header>
+    <ul class="fields">
+      <li><span class="k">type</span><span class="ty">enum</span><span class="d">ORDER · QUOTE · SAMPLE</span></li>
+      <li><span class="k">status</span><span class="ty">enum</span><span class="d">DRAFT · SUBMITTED · REVIEWING · QUOTED · CONFIRMED · SHIPPED · CANCELLED</span></li>
+      <li><span class="k">customer_id / guest_contact</span><span class="ty">uuid? / jsonb?</span><span class="d">misafir de teklif bırakabilmeli</span></li>
+      <li><span class="k">currency / subtotal / total</span><span class="ty">char(3) / decimal</span><span class="d">gönderim anında <b>dondurulur</b></span></li>
+      <li><span class="k">reference_no</span><span class="ty">text</span><span class="d">insan okuyabilir: SP-2609-0142</span></li>
+    </ul>
+  </div>
+
+  <div class="entity">
+    <header><h4>OrderLine</h4><span class="note">varyant bazında</span></header>
+    <ul class="fields">
+      <li><span class="k">variant_id</span><span class="ty">uuid</span><span class="d"></span></li>
+      <li><span class="k">sku_snapshot / name_snapshot</span><span class="ty">text</span><span class="d">ürün sonradan değişse bile sipariş belgesi bozulmaz</span></li>
+      <li><span class="k">qty / unit_price_snapshot</span><span class="ty">int / decimal</span><span class="d"></span></li>
+    </ul>
+  </div>
+
+  <div class="dissent">
+    <span class="tag">Üç ayrım &mdash; neden senin şemandan saptım</span>
+    <p><strong>1. Fiyat ve stok Product'ta değil Variant'ta.</strong> Senin taslağında <code>Product.stock</code> var. 10.000 üründe bu şu demek: "siyah M kaldı mı?" sorusuna cevap veremezsin ve müşteriye olmayan bedeni satarsın. B2B'de bir yanlış stok bilgisi, kötü tasarımdan daha çok müşteri kaybettirir.</p>
+    <p><strong>2. Renk ve beden serbest metin değil, referans tablo.</strong> Katalogda "Siyah", "SİYAH", "Black", "S.YAH" hepsi olacak. Serbest metin bırakırsan filtre ilk günden çöker ve geri dönüşü pahalı olur.</p>
+    <p><strong>3. Siparişte snapshot zorunlu.</strong> Fiyat ve isim sipariş satırına kopyalanmazsa, ürün fiyatı güncellendiğinde geçmiş siparişlerin tutarı geriye dönük değişir. Bu bir arayüz hatası değil, muhasebe problemi.</p>
+  </div>
+
+  <h3>Katalog aktarım hattı</h3>
+  <p>İçe aktarım tek seferlik bir script değil, <strong>tekrarlanabilir ve insan onaylı</strong> bir hat olmalı &mdash; çünkü katalog her sezon güncellenecek.</p>
+<div class="tree"><b>1. Yükle</b>      PDF / XLSX / CSV / görsel klasörü  &rarr;  <i>ImportBatch kaydı</i>
+<b>2. Çıkar</b>      kural tabanlı ayrıştırıcı, belirsizse LLM çıkarımı
+<b>3. Normalize</b>  renk/beden/kumaş eşleme sözlüğü · SKU deseni doğrulama
+<b>4. Doğrula</b>    zorunlu alan · yinelenen SKU · fiyat aralığı · görsel eşleşmesi
+<b>5. <u>ONAYLA</u></b>     admin ekranında satır satır önizleme &mdash; <i>otomatik yazma yok</i>
+<b>6. Yayınla</b>    transaction içinde upsert · her satır batch'e bağlı
+<b>7. Geri al</b>    batch bazında rollback</div>
+  <p>Beşinci adım pazarlık konusu değil. AI destekli çıkarım yanlış SKU veya yanlış fiyat üretebilir; onaysız yazan bir hat, canlı katalogu bozar.</p>
+</section>
+
+<section id="s9">
+  <h2><span class="num">09</span>Önerilen Teknoloji Yığını</h2>
+  <div class="rule"></div>
+  <p>Senin tercihlerini büyük ölçüde onaylıyorum &mdash; ayrıldığım noktaları işaretledim.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Katman</th><th>Seçim</th><th>Gerekçe</th></tr></thead>
+    <tbody>
+      <tr><td>Framework</td><td class="f">Next.js 15 · App Router</td><td>SSR/ISR ile SEO, sunucu bileşenleriyle ürün listelerinde küçük JS paketi.</td></tr>
+      <tr><td>Dil</td><td class="f">TypeScript (strict)</td><td>Varyant ve fiyat mantığı tip hatasına en açık yer.</td></tr>
+      <tr><td>Stil</td><td class="f">Tailwind + CSS değişkenleri</td><td>Token'lar CSS değişkeninde tutulur; marka ve tema değişimi Tailwind config'e kilitlenmez.</td></tr>
+      <tr><td>Bileşen</td><td class="f">Radix UI (headless)</td><td>Erişilebilir drawer, dialog, combobox. Hazır temalı kütüphane <b>kullanma</b> &mdash; "AI yapımı" görünümün ana kaynağı odur.</td></tr>
+      <tr><td>Veritabanı</td><td class="f">PostgreSQL 16</td><td>İlişkisel yapı, tam metin arama, trigram ve jsonb tek yerde.</td></tr>
+      <tr><td>ORM</td><td class="f">Drizzle <span class="chip md">ayrım</span></td><td>Prisma da çalışır; Drizzle daha ince SQL kontrolü, hızlı soğuk başlangıç ve serverless'ta daha az bağlantı derdi verir. Prisma'da ısrar edersen kabul edilebilir &mdash; yeter ki decimal tipi ve bağlantı havuzu (PgBouncer) baştan doğru kurulsun.</td></tr>
+      <tr><td>Kimlik</td><td class="f">Auth.js v5 <span class="chip md">ayrım</span></td><td>Clerk hızlı, ama B2B'de <b>firma onayı</b> akışı gerekiyor (kayıt &rarr; admin onayı &rarr; fiyat görme). Bu mantık kendi veritabanında olmalı; dış sağlayıcıya kilitlenmek sonra pahalıya patlar.</td></tr>
+      <tr><td>Görsel</td><td class="f">S3 uyumlu depolama + next/image</td><td>AVIF/WebP, boyut varyantları, imzalı yükleme URL'i.</td></tr>
+      <tr><td>Arama</td><td class="f">Postgres FTS + pg_trgm, sonra Meilisearch</td><td>10.000 ürüne kadar Postgres yeter; bu ölçekte Algolia maliyeti gereksiz.</td></tr>
+      <tr><td>E-posta</td><td class="f">Resend / Postmark</td><td>Sipariş bildirimleri işlem e-postasıdır; SMTP'yi kendin yönetme.</td></tr>
+      <tr><td>Doğrulama</td><td class="f">Zod</td><td>İstemci ve sunucuda aynı şema.</td></tr>
+      <tr><td>Barındırma</td><td class="f">Vercel + yönetilen Postgres</td><td>TR trafiği için Frankfurt bölgesi; görseller CDN üzerinden.</td></tr>
+      <tr><td>Hata takibi</td><td class="f">Sentry</td><td>Sipariş akışında sessiz hata kabul edilemez.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="dissent">
+    <span class="tag">Karşı görüş &mdash; FastAPI'ye gerek yok</span>
+    <p>Brief "gerektiğinde ayrı FastAPI" diyor. Bu ölçekte ikinci bir servis demek ikinci bir dağıtım, ikinci bir tip tanımı ve iki kat operasyon demek. Tek istisna uzun süren işler: toplu görsel işleme ve LLM çıkarımı. Onlar da ayrı bir web framework yerine <strong>bir kuyruk ve worker</strong> ile çözülür. Gerçekten Python gerekirse (ileri görüntü işleme), o zaman tek amaçlı küçük bir servis eklenir &mdash; şimdiden değil.</p>
+  </div>
+</section>
+
+<section id="s10">
+  <h2><span class="num">10</span>AI Mimarisi</h2>
+  <div class="rule"></div>
+  <p>AI özellikleri MVP'de <strong>yok</strong>; ama mimari onları sonradan sancısız kabul edecek şekilde kurulmalı. Üç ayrı yetenekten bahsediyoruz ve sadece biri bugün gerçekten değerli.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Yetenek</th><th>Değer</th><th>Ne zaman</th></tr></thead>
+    <tbody>
+      <tr><td>Katalog çıkarımı (PDF &rarr; yapılandırılmış veri)</td><td>Çok yüksek &mdash; elle veri girişini haftalardan saatlere indirir</td><td><span class="chip mvp">Şimdi</span></td></tr>
+      <tr><td>Semantik arama ("yazlık oversize siyah tişört")</td><td>Orta &mdash; filtreler iyi kurulursa ihtiyaç azalır</td><td><span class="chip md">Faz 3</span></td></tr>
+      <tr><td>Sohbet eden satın alma asistanı</td><td>Düşük &mdash; B2B alıcı tablo ister, sohbet istemez</td><td><span class="chip lo">Değerlendir</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Soyutlama şöyle: uygulama kodu yalnızca <code>SearchProvider</code> ve <code>ExtractionProvider</code> arayüzlerini çağırır. MVP'de arkalarında <code>PostgresSearchProvider</code> ve <code>RuleBasedExtractor</code> durur; sonra <code>HybridSearchProvider</code> (pgvector + FTS, karşılıklı sıralama) ve <code>LLMExtractor</code> takılır. Ürün kodunun hiçbir yerinde doğrudan model çağrısı olmaz.</p>
+  <p>Gömme vektörleri için ayrı bir vektör veritabanı kurmaya gerek yok: <code>pgvector</code> aynı Postgres içinde, bu ölçek için fazlasıyla yeterli ve filtrelemeyle aynı sorguda birleşebilir.</p>
+  <div class="dissent">
+    <span class="tag">Karşı görüş &mdash; "Bu ürünü alanlar şunu da aldı"</span>
+    <p>Bu öneri türü <em>davranış verisi</em> ister. Sitede henüz sipariş yokken çalışmaz; boş veya alakasız öneriler güveni zedeler. İlk aylar için doğru yaklaşım kural tabanlı benzerlik: aynı kategori, aynı kumaş, yakın fiyat. Yeterince sipariş biriktiğinde gerçek birlikte-alım analizine geçilir.</p>
+  </div>
+</section>
+
+<section id="s11">
+  <h2><span class="num">11</span>Admin Mimarisi</h2>
+  <div class="rule"></div>
+  <p>Admin, müşteri sitesiyle aynı Next.js uygulamasında ayrı bir route group olarak yaşar &mdash; ayrı proje değil, çünkü tipler ve iş mantığı ortak. Ayrımı middleware ve rol kontrolü sağlar; üstelik yetki her sunucu eyleminde <em>tekrar</em> doğrulanır. Yalnızca middleware'e güvenmek klasik bir güvenlik açığıdır.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Rol</th><th>Yetki</th></tr></thead>
+    <tbody>
+      <tr><td class="f">OWNER</td><td>Her şey + kullanıcı/rol yönetimi + ayarlar</td></tr>
+      <tr><td class="f">CATALOG</td><td>Ürün, varyant, görsel, kategori, import</td></tr>
+      <tr><td class="f">SALES</td><td>Sipariş/teklif kuyruğu, fiyat teklifi verme, müşteri görüntüleme</td></tr>
+      <tr><td class="f">WAREHOUSE</td><td>Yalnızca stok güncelleme</td></tr>
+      <tr><td class="f">VIEWER</td><td>Salt okunur</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <h3>Kritik admin ekranları</h3>
+  <ul>
+    <li><strong>Varyant matrisi editörü</strong> &mdash; renk × beden ızgarası, tek ekranda toplu stok ve fiyat girişi, Excel'den yapıştırarak doldurma. Bu ekran iyi olmazsa firma sisteme veri girmez ve proje ölür.</li>
+    <li><strong>Sipariş kuyruğu</strong> &mdash; tek listede sipariş ve teklif, durum değiştirme, satır bazında fiyat düzenleme, teklifi PDF olarak gönderme.</li>
+    <li><strong>Import onay ekranı</strong> &mdash; çıkarılan satırlar, güven skoru düşük alanlar işaretli, satır satır kabul/düzelt/reddet.</li>
+    <li><strong>Veri kalitesi paneli</strong> &mdash; görseli olmayan, fiyatı boş, stoğu tanımsız ürünlerin listesi.</li>
+    <li><strong>Denetim kaydı</strong> &mdash; fiyat ve stok değişiklikleri kim, ne zaman. B2B'de fiyat itirazı geldiğinde gerekir.</li>
+  </ul>
+</section>
+
+<section id="s12">
+  <h2><span class="num">12</span>SEO Stratejisi</h2>
+  <div class="rule"></div>
+  <p>Bu sitede organik trafiğin çoğu ürün sayfasından değil, <strong>kategori sayfalarından</strong> gelir: "toptan tişört", "toptan sweatshirt imalatçısı" gibi aramalar. Bu yüzden kategori sayfaları şablon değil, gerçek iniş sayfası olarak yazılmalı: özgün açıklama metni, MOQ ve fiyat aralığı, sık sorulan sorular.</p>
+  <ul>
+    <li><strong>Render</strong> &mdash; ürün ve kategori sayfaları ISR ile statik; sepet ve hesap dinamik ve <code>noindex</code>.</li>
+    <li><strong>Metadata</strong> &mdash; <code>generateMetadata</code> ile; başlık deseni <span class="mono">{ürün} — Toptan {kategori} | {marka}</span>.</li>
+    <li><strong>Yapısal veri</strong> &mdash; <code>Product</code> + <code>Offer</code> (fiyat gizliyse <code>AggregateOffer</code>), <code>BreadcrumbList</code>, <code>Organization</code>, SSS için <code>FAQPage</code>.</li>
+    <li><strong>Kanonik</strong> &mdash; filtreli URL'ler kategori sayfasına canonical ve <code>noindex, follow</code>. Aksi halde 10.000 ürün × filtre kombinasyonu tarama bütçesini yakar.</li>
+    <li><strong>Sitemap</strong> &mdash; ürün sayısı büyüdüğünde parçalı sitemap index; <code>lastmod</code> gerçek güncelleme tarihinden.</li>
+    <li><strong>Slug kalıcılığı</strong> &mdash; ürün adı değişince slug değişmez; değişmesi gerekirse <code>slug_history</code> üzerinden 301.</li>
+    <li><strong>hreflang</strong> &mdash; TR/EN sürümler, <code>x-default</code> TR'ye.</li>
+    <li><strong>Görsel SEO</strong> &mdash; dosya adı ve <code>alt</code> metni ürün adı + renk içerir; Google Görseller tekstilde ciddi bir trafik kaynağı.</li>
+  </ul>
+</section>
+
+<section id="s13">
+  <h2><span class="num">13</span>UX/UI Stratejisi</h2>
+  <div class="rule"></div>
+  <p>Nötr ve sessiz bir arayüz, güçlü tipografi, ürün fotoğrafının tek renk kaynağı olduğu bir düzen. Editoryal ızgara ile veri yoğun tablolar bir arada: üst yarı moda, alt yarı ticaret. Tek vurgu rengi, yalnızca eylem ve durum için.</p>
+  <ul>
+    <li><strong>Ürün kartı</strong> &mdash; görsel 4:5, altında ad, model kodu, fiyat ve MOQ tek satırda, renk noktaları. Kartta gölge ve çerçeve yok; ayrımı boşluk yapar.</li>
+    <li><strong>Katalog</strong> &mdash; masaüstünde sol filtre sütunu sabit, seçili filtreler üstte kaldırılabilir etiketler halinde; mobilde alt sayfa (bottom sheet) ve sonuç sayısı düğmenin üstünde canlı.</li>
+    <li><strong>Beden-adet ızgarası</strong> &mdash; ürün sayfasının kalbi. Renk sekmesi, beden satırları, adet girişi ve canlı toplam. Mobilde her satır dokunulabilir yükseklikte, sayı klavyesi açılır, altta yapışkan "Sepete ekle · 100 adet".</li>
+    <li><strong>Fiyat gösterimi</strong> &mdash; birim fiyat büyük, yanında birim küçük; MOQ ikinci satırda. Toplam tutar her zaman görünür.</li>
+    <li><strong>Stok</strong> &mdash; sayı değil durum: <em>Stokta</em> / <em>Sınırlı</em> / <em>Üretime bağlı</em>. Yanlış sayı göstermek, sayı göstermemekten kötüdür.</li>
+    <li><strong>Boş durumlar</strong> &mdash; "sonuç yok" yerine filtre gevşetme önerisi ve WhatsApp bağlantısı.</li>
+    <li><strong>Güven</strong> &mdash; footer'da gerçek adres, vergi dairesi ve numarası, telefon; ürün sayfasında sevkiyat süresi ve iade koşulu. <b>Hiçbiri uydurulmayacak</b> &mdash; bu bilgileri senden isteyeceğim.</li>
+  </ul>
+  <div class="dissent">
+    <span class="tag">Karşı görüş &mdash; Alt navigasyon ve pop-up</span>
+    <p>Brief "gerekiyorsa bottom navigation" diyor. Gerekmiyor: bu bir uygulama değil ve ekranın altındaki alan yapışkan "Sepete ekle" için çok daha değerli. Aynı şekilde açılışta çıkan bülten veya indirim pop-up'ı B2B'de dönüşümü artırmaz, yalnızca rahatsız eder.</p>
+  </div>
+</section>
+
+<section id="s14">
+  <h2><span class="num">14</span>Güvenlik Riskleri</h2>
+  <div class="rule"></div>
+  <div class="risk"><span class="sev"><span class="chip hi">Yüksek</span></span><div><h4>Fiyat listesinin sızması</h4><p>Fiyat üyeliğe kapalıysa asıl risk XSS değil, <strong>API'den toplu çekim</strong>. Ürün uç noktaları yetkiyi sunucuda kontrol etmeli; hız sınırı ve sayfa başına kayıt tavanı olmalı; fiyat, giriş yapmamış kullanıcıya giden JSON'a hiç konmamalı.</p></div></div>
+  <div class="risk"><span class="sev"><span class="chip hi">Yüksek</span></span><div><h4>Admin yetki atlatma</h4><p>Yalnızca middleware ile korunan admin rotaları, sunucu eylemleri doğrudan çağrılarak atlatılabilir. Her mutasyon fonksiyonu kendi içinde oturum ve rol doğrulaması yapmalı.</p></div></div>
+  <div class="risk"><span class="sev"><span class="chip hi">Yüksek</span></span><div><h4>Sahte firma kayıtları</h4><p>Fiyat üyeliğe kapalıysa rakipler kaydolur. Çözüm: kayıt onaylı olsun (admin onayına kadar fiyat görünmesin), vergi numarası formatı doğrulansın, tek kullanımlık e-posta alanları engellensin.</p></div></div>
+  <div class="risk"><span class="sev"><span class="chip md">Orta</span></span><div><h4>Dosya yükleme</h4><p>Admin görsel yüklemesinde: MIME doğrulama, boyut sınırı, yeniden kodlama (yüklenen dosya olduğu gibi servis edilmez), rastgele dosya adı, ayrı bucket, dizin dışına yazma koruması.</p></div></div>
+  <div class="risk"><span class="sev"><span class="chip md">Orta</span></span><div><h4>Form istismarı</h4><p>Teklif formu spam hedefi olur. Hız sınırı (IP + e-posta), gizli honeypot alanı, bot koruması; giden e-postada HTML kaçışı &mdash; e-posta üzerinden XSS admin paneline sıçrayabilir.</p></div></div>
+  <div class="risk"><span class="sev"><span class="chip md">Orta</span></span><div><h4>KVKK / GDPR</h4><p>Firma yetkilisinin adı, telefonu ve e-postası kişisel veridir. Aydınlatma metni, açık rıza kaydı, veri silme talebi akışı ve loglarda kişisel veri tutmama gerekir. AB'ye satış varsa GDPR de devrede.</p></div></div>
+  <div class="risk"><span class="sev"><span class="chip lo">Temel</span></span><div><h4>Standart önlemler</h4><p>ORM ile parametreli sorgu, Zod ile girdi doğrulama, React'in varsayılan kaçışı (<code>dangerouslySetInnerHTML</code> yasak), SameSite çerez + CSRF token, CSP başlıkları, sırların yalnızca sunucu ortam değişkeninde tutulması (<code>NEXT_PUBLIC_</code> ile anahtar veya gizli fiyat taşınmaz).</p></div></div>
+</section>
+
+<section id="s15">
+  <h2><span class="num">15</span>Ölçek Riskleri</h2>
+  <div class="rule"></div>
+  <p>Sorduğun soruyu her karara uyguladım: <em>10.000 ürün ve binlerce müşteride hâlâ çalışır mı?</em> Kırılacak yerler şunlar.</p>
+  <div class="risk"><span class="sev"><span class="chip hi">Yüksek</span></span><div><h4>Varyant patlaması</h4><p>10.000 ürün × 8 renk × 6 beden = <strong>480.000 varyant satırı</strong>. Katalog listesinde her ürün için varyant çekmek N+1 sorgu demektir. Çözüm: liste görünümü için özet görünüm/tablo (en düşük fiyat, renk sayısı, stok durumu, kapak görseli); varyantlar yalnızca detay sayfasında yüklenir.</p></div></div>
+  <div class="risk"><span class="sev"><span class="chip hi">Yüksek</span></span><div><h4>Filtreleme performansı</h4><p>Çok kriterli filtre (renk + beden + fiyat + kumaş) join'lerle yavaşlar. Çözüm: filtrelenebilir özniteliklerin ürün satırında denormalize dizi olarak tutulması ve GIN index. Ölçek daha da büyürse faceted search Meilisearch'e devredilir.</p></div></div>
+  <div class="risk"><span class="sev"><span class="chip md">Orta</span></span><div><h4>Görsel maliyeti ve LCP</h4><p>10.000 ürün × 5 görsel = 50.000 dosya. Kaynak dosyalar sıkıştırılmadan yüklenirse hem depolama hem dönüştürme maliyeti patlar. Boyut varyantları yükleme anında üretilmeli; kapak görseli öncelikli, geri kalanı tembel yüklenmeli.</p></div></div>
+  <div class="risk"><span class="sev"><span class="chip md">Orta</span></span><div><h4>Serverless bağlantı havuzu</h4><p>Sunucusuz fonksiyonlar Postgres bağlantısını tüketir. PgBouncer veya yönetilen bir havuz zorunlu; ORM tarafında düşük bağlantı limiti.</p></div></div>
+  <div class="risk"><span class="sev"><span class="chip md">Orta</span></span><div><h4>Önbellek geçersizleştirme</h4><p>Statik ürün sayfaları hızlıdır ama stok ve fiyat değişince bayat kalır. Çözüm: admin güncellemesinde etiket bazlı yeniden doğrulama; stok gibi çok değişen veri istemci tarafında ayrı bir çağrıyla tazelenir.</p></div></div>
+  <div class="risk"><span class="sev"><span class="chip lo">İzle</span></span><div><h4>Admin toplu işlemleri</h4><p>5.000 satırlık bir import isteği zaman aşımına uğrar. Kuyruk, parça parça işleme ve ilerleme göstergesi gerekir; senkron çalıştırma ilk büyük katalogda kırılır.</p></div></div>
+</section>
+
+<section id="s16">
+  <h2><span class="num">16</span>Geliştirme Yol Haritası</h2>
+  <div class="rule"></div>
+  <p>Süreler tek geliştirici varsayımıyla, kabaca. Her fazın sonunda gösterilebilir bir çıktı var &mdash; hiçbir faz salt "altyapı" olarak geçmiyor.</p>
+  <div class="phase"><span class="when">Hafta 0</span><div><h4>Katalog denetimi</h4><ul><li>Kataloğun analizi ve <b>Catalog Data Audit</b> raporu</li><li>Eksik alanların ve tutarsızlıkların listesi</li><li>Fiyat görünürlüğü ve marka adı kararları</li></ul></div></div>
+  <div class="phase"><span class="when">Hafta 1</span><div><h4>Veri temeli</h4><ul><li>Şema, migration, seed</li><li>Renk/beden/kumaş normalizasyon sözlüğü</li><li>Import hattı ve admin onay ekranı</li></ul></div></div>
+  <div class="phase"><span class="when">Hafta 2</span><div><h4>Tasarım sistemi</h4><ul><li>Token'lar, tipografi ölçeği, ızgara, bileşen kitaplığı</li><li>Ürün kartı, filtre ve beden-adet ızgarası prototipleri</li></ul></div></div>
+  <div class="phase"><span class="when">Hafta 3&ndash;4</span><div><h4>Vitrin</h4><ul><li>Ana sayfa, kategori, katalog + filtre, ürün detay</li><li>Arama ve autocomplete</li><li>SEO metadata ve yapısal veri</li></ul></div></div>
+  <div class="phase"><span class="when">Hafta 5</span><div><h4>Sipariş akışı</h4><ul><li>Sipariş taslağı, MOQ doğrulama, gönderim</li><li>Teklif formu ve e-posta bildirimleri</li></ul></div></div>
+  <div class="phase"><span class="when">Hafta 6</span><div><h4>Hesap ve kimlik</h4><ul><li>Onaylı kayıt, giriş, firma bilgileri</li><li>Sipariş geçmişi, favoriler, tekrar sipariş</li></ul></div></div>
+  <div class="phase"><span class="when">Hafta 7</span><div><h4>Admin</h4><ul><li>Varyant matrisi editörü, sipariş kuyruğu</li><li>Roller, denetim kaydı, veri kalitesi paneli</li></ul></div></div>
+  <div class="phase"><span class="when">Hafta 8</span><div><h4>Sertleştirme ve yayın</h4><ul><li>Uç durum testleri, hız sınırı, güvenlik başlıkları</li><li>Core Web Vitals, erişilebilirlik denetimi</li><li>Analitik olayları, canlıya alma</li></ul></div></div>
+  <div class="phase"><span class="when">Sonrası</span><div><h4>Faz 2+</h4><ul><li>EN dil, USD/EUR, proforma</li><li>Müşteriye özel fiyat listesi, kademeli fiyat</li><li>Semantik arama, numune akışı, kargo entegrasyonu</li></ul></div></div>
+</section>
+
+<section id="ask" class="ask">
+  <h2><span class="num">&rarr;</span>Sıradaki Adım</h2>
+  <div class="rule"></div>
+  <p><strong>Şimdi ürün kataloğunu göndermeni istiyorum.</strong> Katalogu görmeden ürün sayısı, kategori yapısı, SKU deseni veya fiyatlar hakkında tek bir varsayım yapmayacağım.</p>
+  <h3>Kataloğu nasıl gönder</h3>
+  <ul>
+    <li>Dosyaları şu klasöre koy: <code>Desktop\sima tekstil\catalog\</code></li>
+    <li>Kabul edilen formatlar: PDF, XLSX/CSV, görsel klasörü, Word, hatta WhatsApp'tan çıkmış karışık dosyalar.</li>
+    <li>Elinde ne varsa <em>olduğu gibi</em> gönder &mdash; temizlemeye çalışma. Ham hali bana veri kalitesi hakkında da bilgi veriyor.</li>
+    <li>Birden fazla kaynak varsa (fiyat listesi ayrı Excel, görseller ayrı klasör) hepsini gönder ve hangisinin güncel olduğunu belirt.</li>
+  </ul>
+  <h3>Katalogla birlikte cevaplaman gereken sekiz soru</h3>
+  <ol class="body">
+    <li><span class="q">Marka adı ve alan adı</span> belli mi? Değilse geçici bir ad kullanacağım.</li>
+    <li><span class="q">Fiyat herkese açık mı, üyeliğe kapalı mı?</span> (Bölüm 05'teki karar &mdash; mimariyi doğrudan etkiliyor.)</li>
+    <li><span class="q">MOQ politikası</span> nedir? Ürün başına mı, sipariş toplamına mı, seri/koli bazında mı?</li>
+    <li><span class="q">Stok bilgisi gerçek mi?</span> Canlı stok verisi var mı, yoksa "üretime bağlı" mı çalışıyorsunuz?</li>
+    <li><span class="q">Gerçek firma bilgileri</span> &mdash; unvan, adres, vergi dairesi ve numarası, telefon, WhatsApp, e-posta. Uydurmayacağım; verilmezse yer tutucu kalır.</li>
+    <li><span class="q">Sevkiyat ve ödeme koşulları</span> &mdash; teslim süresi, nakliye kimin, ödeme şekli, iade politikası. Sadece gerçekten uyguladıklarınızı yazacağım.</li>
+    <li><span class="q">Mevcut site, Instagram veya müşteri listesi</span> var mı? Varsa mevcut içerik ve trafik korunmalı.</li>
+    <li><span class="q">Yurtdışı satış</span> bugün var mı, yoksa hedef mi? Cevap, EN dilinin ne zaman geleceğini belirliyor.</li>
+  </ol>
+  <p>Katalog gelir gelmez ikinci fazın çıktısı olan <strong>Catalog Data Audit</strong>'i hazırlayacağım: ürün sayısı, kategori dağılımı, varyant yapısı, SKU deseni, fiyat aralıkları, görsel kapsamı, eksik alanlar, yinelenen kayıtlar ve veri tutarsızlıkları. Kod yazımı ondan sonra başlar.</p>
+</section>
+
+<footer>
+  <span>Faz 1 / 9 &mdash; Keşif &amp; Mimari</span>
+  <span>Sonraki: Faz 2 &mdash; Catalog Data Audit</span>
+  <span>Durum: katalog bekleniyor</span>
+</footer>
+
+</main>
+</div>
+</div>

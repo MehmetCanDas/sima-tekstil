@@ -1,0 +1,405 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Sima tasarim sistemi
+   Renk: markanin kendi logosundan alinan sicak krem + terrakota paleti.
+   Ornekler dogrudan public/brand/sima-logo.png uzerinden olculdu:
+     krem zemin  #f8eae1   el yazisi turuncu #e07c40
+     yaprak      #f07925   "UNIFORMA" kahvesi #8a7363   bej yaprak #dec6a4
+   Etkilesimli turuncu (--color-accent) logodakinden bir tik koyu: uzerine beyaz
+   yaziyla dusen butonlarda okunabilirlik esigini gecmesi gerekiyor. Logonun
+   kendi turuncusu dekoratif kullanim icin --color-brand olarak durur.
+
+   Tipografi: Barlow Condensed (baslik) + Barlow (govde) - katalogun kendi
+   yazi tipi ailesi.
+   ------------------------------------------------------------------------ */
+
+@theme {
+  --color-bg: #fdf8f4;
+  --color-surface: #f8eae1;
+  --color-surface-2: #f0dbcc;
+  --color-ink: #38271d;
+  --color-ink-2: #6a5245;
+  --color-muted: #7a6353;
+  --color-line: #ecdcd0;
+  --color-line-strong: #d6bda8;
+  --color-accent: #c25e22;
+  --color-accent-hover: #a44c18;
+  --color-accent-soft: #fbe7d7;
+  --color-brand: #e07c40;
+  --color-ok: #4a7343;
+  --color-warn: #96661a;
+
+  --font-display: var(--font-barlow-condensed), "Arial Narrow", system-ui, sans-serif;
+  --font-sans: var(--font-barlow), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", "Consolas", monospace;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+  ::selection {
+    background: var(--color-accent);
+    color: #fff;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .u-wrap {
+    max-width: 1240px;
+    margin-inline: auto;
+    padding-inline: 20px;
+  }
+  .u-eyebrow {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+  .u-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 44px;
+    padding-inline: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    border: 1px solid transparent;
+    transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+  }
+  .u-btn-primary {
+    background: var(--color-accent);
+    color: #fff;
+    box-shadow: 0 8px 20px -12px color-mix(in srgb, var(--color-accent) 85%, transparent);
+  }
+  .u-btn-primary:hover {
+    background: var(--color-accent-hover);
+    box-shadow: 0 10px 24px -12px color-mix(in srgb, var(--color-accent) 95%, transparent);
+  }
+  .u-btn-ghost {
+    border-color: var(--color-line-strong);
+    color: var(--color-ink);
+    background: var(--color-bg);
+  }
+  .u-btn-ghost:hover {
+    border-color: var(--color-ink);
+  }
+  /* Fotograf plakasi: katalog fotograflari beyaz zeminli cekildigi icin krem
+     sayfada bilerek beyaz bir yuzeyde durur. */
+  .u-plate {
+    background: #fff;
+    border: 1px solid var(--color-line);
+  }
+
+  /* Kart kaldirma: golge sicak kahveden turetildi, notr siyah degil. */
+  .u-lift {
+    transition:
+      transform 0.28s cubic-bezier(0.2, 0.7, 0.3, 1),
+      box-shadow 0.28s cubic-bezier(0.2, 0.7, 0.3, 1),
+      border-color 0.2s;
+  }
+  .u-lift:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 34px -16px rgba(56, 39, 29, 0.35);
+  }
+
+  /* Okla biten ikincil baglanti. Ok hover'da ilerler. */
+  .u-link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-accent);
+    border-bottom: 1px solid transparent;
+  }
+  .u-link-arrow:hover {
+    border-bottom-color: currentColor;
+  }
+  .u-link-arrow-icon {
+    transition: transform 0.22s ease;
+  }
+  .u-link-arrow:hover .u-link-arrow-icon {
+    transform: translateX(4px);
+  }
+
+  /* Sayfa ustundeki sicak isik. Hero ve baslik bantlarinda kullanilir. */
+  .u-glow {
+    background:
+      radial-gradient(
+        90% 120% at 12% 0%,
+        color-mix(in srgb, var(--color-accent) 12%, transparent) 0%,
+        transparent 62%
+      ),
+      var(--color-surface);
+  }
+
+  .u-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 3px 7px;
+    border: 1px solid currentColor;
+    line-height: 1.3;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Yonetim paneli kendi notr paletini korur.
+
+   Vitrin markanin sicak krem tonlarina gecti; panel ise gun boyu bakilan bir
+   veri araci oldugu icin bilerek notr grafit kaldi. Tokenlar burada yeniden
+   tanimlanir, boylece ayni yardimci siniflar (bg-bg, text-ink, border-line...)
+   panel icinde eski degerleriyle cozulur.
+   ------------------------------------------------------------------------ */
+
+.admin-theme {
+  --color-bg: #ffffff;
+  --color-surface: #f4f5f6;
+  --color-surface-2: #eaecee;
+  --color-ink: #14171a;
+  --color-ink-2: #454d54;
+  --color-muted: #767e86;
+  --color-line: #e0e4e7;
+  --color-line-strong: #c8ced3;
+  --color-accent: #d9660f;
+  --color-accent-hover: #b8540b;
+  --color-accent-soft: #fdf1e6;
+  --color-brand: #d9660f;
+  --color-ok: #1f6b47;
+  --color-warn: #8a5d0b;
+
+  min-height: 100dvh;
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+/* ---------------------------------------------------------------------------
+   Admin paneli
+   Ayni renk tokenlarini kullanir; panelde daha sik bir olcek ve yatay yogunluk
+   gerektigi icin kendi bilesen sinifi ailesi vardir (a-*).
+   ------------------------------------------------------------------------ */
+
+@layer components {
+  .a-shell {
+    display: grid;
+    grid-template-columns: 236px minmax(0, 1fr);
+    min-height: 100dvh;
+    background: var(--color-surface);
+  }
+  @media (max-width: 900px) {
+    .a-shell {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  .a-card {
+    background: var(--color-bg);
+    border: 1px solid var(--color-line);
+  }
+
+  .a-input,
+  .a-select,
+  .a-textarea {
+    width: 100%;
+    background: var(--color-bg);
+    border: 1px solid var(--color-line-strong);
+    color: var(--color-ink);
+    font-size: 14px;
+    padding: 8px 10px;
+    line-height: 1.4;
+  }
+  .a-input:focus,
+  .a-select:focus,
+  .a-textarea:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: -1px;
+    border-color: var(--color-accent);
+  }
+  .a-input:disabled,
+  .a-select:disabled {
+    background: var(--color-surface);
+    color: var(--color-muted);
+  }
+  .a-input[aria-invalid="true"],
+  .a-select[aria-invalid="true"],
+  .a-textarea[aria-invalid="true"] {
+    border-color: #b3261e;
+  }
+  .a-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-ink-2);
+    margin-bottom: 5px;
+  }
+  .a-hint {
+    font-size: 12px;
+    color: var(--color-muted);
+    margin-top: 4px;
+  }
+  .a-error {
+    font-size: 12px;
+    color: #b3261e;
+    margin-top: 4px;
+  }
+
+  .a-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 36px;
+    padding-inline: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    transition: background-color 0.12s, border-color 0.12s, color 0.12s;
+  }
+  .a-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .a-btn-primary {
+    background: var(--color-accent);
+    color: #fff;
+  }
+  .a-btn-primary:hover:not(:disabled) {
+    background: var(--color-accent-hover);
+  }
+  .a-btn-ghost {
+    background: var(--color-bg);
+    border-color: var(--color-line-strong);
+    color: var(--color-ink);
+  }
+  .a-btn-ghost:hover:not(:disabled) {
+    border-color: var(--color-ink);
+  }
+  .a-btn-danger {
+    background: var(--color-bg);
+    border-color: #e0b4b1;
+    color: #b3261e;
+  }
+  .a-btn-danger:hover:not(:disabled) {
+    background: #fdf3f2;
+    border-color: #b3261e;
+  }
+  .a-btn-sm {
+    height: 30px;
+    padding-inline: 10px;
+    font-size: 12px;
+  }
+
+  .a-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .a-table thead th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--color-line);
+    background: var(--color-surface);
+    white-space: nowrap;
+  }
+  .a-table tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--color-line);
+    vertical-align: middle;
+  }
+  .a-table tbody tr:hover {
+    background: var(--color-surface);
+  }
+
+  .a-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 2px 7px;
+    border: 1px solid currentColor;
+    white-space: nowrap;
+  }
+  .a-badge-ok {
+    color: var(--color-ok);
+  }
+  .a-badge-warn {
+    color: var(--color-warn);
+  }
+  .a-badge-bad {
+    color: #b3261e;
+  }
+  .a-badge-mute {
+    color: var(--color-muted);
+  }
+
+  .a-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 7px 12px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #c3c8cd;
+    border-left: 2px solid transparent;
+  }
+  .a-nav-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.06);
+  }
+  .a-nav-link[data-active="true"] {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.09);
+    border-left-color: var(--color-accent);
+  }
+}

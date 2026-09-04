@@ -1,0 +1,1 @@
+ALTER TABLE `products` ADD `wholesale_min_qty` integer;

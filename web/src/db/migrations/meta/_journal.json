@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1788355005244,
+      "tag": "0000_uneven_echo",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1788357279761,
+      "tag": "0001_needy_gamora",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1788382799215,
+      "tag": "0002_freezing_millenium_guard",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1788474092772,
+      "tag": "0003_shallow_talos",
+      "breakpoints": true
+    }
+  ]
+}
