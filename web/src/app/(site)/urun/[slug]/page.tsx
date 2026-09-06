@@ -9,13 +9,7 @@ import { SectionHeading } from "@/components/brand/SectionHeading";
 import { brand } from "@/lib/catalog";
 import { money } from "@/lib/admin/format";
 import { hasWholesaleTier } from "@/lib/pricing";
-import { makeCatalogIndex } from "@/lib/product-filter";
-import {
-  getPublishedProduct,
-  getRelatedProducts,
-  getStoreCategories,
-  getStoreSectors,
-} from "@/lib/storefront";
+import { getPublishedProduct, getRelatedProducts } from "@/lib/storefront";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -47,7 +41,6 @@ export default async function ProductPage({ params }: Params) {
   if (!product) notFound();
 
   const related = getRelatedProducts(product, 4);
-  const index = makeCatalogIndex(getStoreCategories(), getStoreSectors());
   const tier = hasWholesaleTier(product);
 
   const jsonLd = {
@@ -211,14 +204,6 @@ export default async function ProductPage({ params }: Params) {
             <Row
               label="Ürün özellikleri"
               value={product.features.length > 0 ? product.features.join(", ") : null}
-            />
-            <Row
-              label="Kullanım alanı"
-              value={
-                product.sectors.length > 0
-                  ? product.sectors.map(index.sectorName).join(", ")
-                  : null
-              }
             />
           </dl>
         </div>
