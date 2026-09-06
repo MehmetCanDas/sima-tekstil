@@ -7,7 +7,8 @@ import { money } from "@/lib/admin/format";
 import { hasWholesaleTier, priceFor } from "@/lib/pricing";
 import type { StoreProduct } from "@/lib/product-types";
 
-const PRESETS = [10, 25, 50, 100, 250];
+const MIN_QTY = 15;
+const PRESETS = [15, 25, 50, 100, 250];
 
 export default function ProductActions({ product }: { product: StoreProduct }) {
   const { add } = useQuote();
@@ -104,10 +105,10 @@ export default function ProductActions({ product }: { product: StoreProduct }) {
             <span className="sr-only">Özel adet</span>
             <input
               type="number"
-              min={1}
+              min={MIN_QTY}
               inputMode="numeric"
               value={qty}
-              onChange={(e) => setQty(Math.max(1, Number(e.target.value) || 1))}
+              onChange={(e) => setQty(Math.max(MIN_QTY, Number(e.target.value) || MIN_QTY))}
               className="h-10 w-24 border border-line-strong px-3 text-[14px] tabular-nums outline-none focus:border-accent"
             />
           </label>
