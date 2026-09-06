@@ -161,9 +161,7 @@ export default async function ProductPage({ params }: Params) {
             <dl className="mt-4 flex flex-wrap gap-x-8 gap-y-2 border-t border-accent/25 pt-3.5 text-[13px]">
               <div>
                 <dt className="text-muted">Minimum sipariş</dt>
-                <dd className="font-semibold">
-                  {product.moq ? `${product.moq} adet` : "teyit edilecek"}
-                </dd>
+                <dd className="font-semibold">15 adet</dd>
               </div>
               <div>
                 <dt className="text-muted">Renk seçeneği</dt>
@@ -188,6 +186,13 @@ export default async function ProductPage({ params }: Params) {
             <span className="u-eyebrow">Detaylar</span>
           </span>
           <h2 className="mt-2.5 text-[28px] font-semibold uppercase">Ürün bilgisi</h2>
+
+          {product.description ? (
+            <p className="mt-5 whitespace-pre-line text-[15px] leading-relaxed text-ink-2">
+              {product.description}
+            </p>
+          ) : null}
+
           <dl className="mt-5 divide-y divide-line border-y border-line text-[14px]">
             <Row label="Kategori" value={product.categoryName} />
             <Row
@@ -215,7 +220,6 @@ export default async function ProductPage({ params }: Params) {
                   : null
               }
             />
-            <Row label="Beden" value={product.sizes.length > 0 ? product.sizes.join(", ") : null} />
           </dl>
         </div>
 

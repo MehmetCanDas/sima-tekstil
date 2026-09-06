@@ -175,6 +175,11 @@
    "id": "yesil",
    "name": "Yesil",
    "hex": "#9CC01A"
+  },
+  {
+   "id": "beyaz",
+   "name": "Beyaz",
+   "hex": "#FFFFFF"
   }
  ],
  "products": [

@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import { sizeScaleFor, useQuote } from "@/lib/quote-store";
-import { sizeKeys } from "@/lib/sizes";
 import { money } from "@/lib/admin/format";
 import { hasWholesaleTier, priceFor } from "@/lib/pricing";
 import type { StoreProduct } from "@/lib/product-types";
@@ -18,7 +17,6 @@ export default function ProductActions({ product }: { product: StoreProduct }) {
 
   const color = colorIndex >= 0 ? product.colors[colorIndex] : null;
   const scale = sizeScaleFor(product.category);
-  const keys = sizeKeys(scale);
   const tier = hasWholesaleTier(product);
   const price = priceFor(product, qty);
 
@@ -84,32 +82,6 @@ export default function ProductActions({ product }: { product: StoreProduct }) {
           teklif aşamasında paylaşıyoruz.
         </p>
       )}
-
-      <div>
-        <h2 className="u-eyebrow">{scale === "shoe" ? "Numara" : "Beden"}</h2>
-        {keys.length === 0 ? (
-          <p className="mt-2 text-[14px] text-ink-2">
-            Tek beden. Bu üründe beden dağılımı gerekmez.
-          </p>
-        ) : (
-          <>
-            <div className="mt-3 flex flex-wrap gap-1.5">
-              {keys.map((k) => (
-                <span
-                  key={k}
-                  className="border border-line-strong px-2.5 py-1 text-[13px] font-semibold"
-                >
-                  {k}
-                </span>
-              ))}
-            </div>
-            <p className="mt-2.5 text-[13.5px] text-ink-2">
-              Adet dağılımını teklif listesinde yapacaksınız: önce toplam adedi ekleyin,
-              sonra tek ekranda tüm ürünlerin dağılımını girin.
-            </p>
-          </>
-        )}
-      </div>
 
       <div>
         <h2 className="u-eyebrow">Adet</h2>
